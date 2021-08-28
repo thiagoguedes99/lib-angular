@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common')) :
-  typeof define === 'function' && define.amd ? define('angular-lib', ['exports', '@angular/core', '@angular/common'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['angular-lib'] = {}, global.ng.core, global.ng.common));
-}(this, (function (exports, i0, common) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('ng-circle-progress'), require('@angular/common')) :
+  typeof define === 'function' && define.amd ? define('angular-lib', ['exports', '@angular/core', 'ng-circle-progress', '@angular/common'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['angular-lib'] = {}, global.ng.core, global.i1, global.ng.common));
+}(this, (function (exports, i0, i1, common) { 'use strict';
 
   function _interopNamespace(e) {
     if (e && e.__esModule) return e;
@@ -25,6 +25,7 @@
   }
 
   var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
+  var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
 
   var AngularLibComponent = /** @class */ (function () {
       function AngularLibComponent() {
@@ -79,7 +80,7 @@
       return CircleProgressComponent;
   }());
   CircleProgressComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressComponent, deps: [], target: i0__namespace.ɵɵFactoryTarget.Component });
-  CircleProgressComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: CircleProgressComponent, selector: "lib-circle-progress", ngImport: i0__namespace, template: "<p>circle-progress works!</p>\n", styles: [""] });
+  CircleProgressComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: CircleProgressComponent, selector: "lib-circle-progress", ngImport: i0__namespace, template: "<p>circle-progress works!</p>\n\n<circle-progress\n  [percent]=\"85\"\n  [radius]=\"100\"\n  [outerStrokeWidth]=\"16\"\n  [innerStrokeWidth]=\"8\"\n  [outerStrokeColor]=\"'#78C000'\"\n  [innerStrokeColor]=\"'#C7E596'\"\n  [animation]=\"true\"\n  [animationDuration]=\"300\"\n></circle-progress>", styles: [""], components: [{ type: i1__namespace.CircleProgressComponent, selector: "circle-progress", inputs: ["name", "class", "backgroundGradient", "backgroundColor", "backgroundGradientStopColor", "backgroundOpacity", "backgroundStroke", "backgroundStrokeWidth", "backgroundPadding", "radius", "space", "percent", "toFixed", "maxPercent", "renderOnClick", "units", "unitsFontSize", "unitsFontWeight", "unitsColor", "outerStrokeGradient", "outerStrokeWidth", "outerStrokeColor", "outerStrokeGradientStopColor", "outerStrokeLinecap", "innerStrokeColor", "innerStrokeWidth", "titleFormat", "title", "titleColor", "titleFontSize", "titleFontWeight", "subtitleFormat", "subtitle", "subtitleColor", "subtitleFontSize", "subtitleFontWeight", "imageSrc", "imageHeight", "imageWidth", "animation", "animateTitle", "animateSubtitle", "animationDuration", "showTitle", "showSubtitle", "showUnits", "showImage", "showBackground", "showInnerStroke", "clockwise", "responsive", "startFromZero", "showZeroOuterStroke", "lazy", "options"], outputs: ["onClick"] }] });
   i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressComponent, decorators: [{
               type: i0.Component,
               args: [{
@@ -95,9 +96,18 @@
       return CircleProgressModule;
   }());
   CircleProgressModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
-  CircleProgressModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressModule, declarations: [CircleProgressComponent], imports: [common.CommonModule], exports: [CircleProgressComponent] });
+  CircleProgressModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressModule, declarations: [CircleProgressComponent], imports: [common.CommonModule, i1__namespace.NgCircleProgressModule], exports: [CircleProgressComponent] });
   CircleProgressModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressModule, imports: [[
-              common.CommonModule
+              common.CommonModule,
+              i1.NgCircleProgressModule.forRoot({
+                  // set defaults here
+                  radius: 100,
+                  outerStrokeWidth: 16,
+                  innerStrokeWidth: 8,
+                  outerStrokeColor: "#78C000",
+                  innerStrokeColor: "#C7E596",
+                  animationDuration: 300,
+              })
           ]] });
   i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressModule, decorators: [{
               type: i0.NgModule,
@@ -106,7 +116,16 @@
                           CircleProgressComponent
                       ],
                       imports: [
-                          common.CommonModule
+                          common.CommonModule,
+                          i1.NgCircleProgressModule.forRoot({
+                              // set defaults here
+                              radius: 100,
+                              outerStrokeWidth: 16,
+                              innerStrokeWidth: 8,
+                              outerStrokeColor: "#78C000",
+                              innerStrokeColor: "#C7E596",
+                              animationDuration: 300,
+                          })
                       ],
                       exports: [
                           CircleProgressComponent
