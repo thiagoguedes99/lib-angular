@@ -3,6 +3,8 @@ import { AngularLibComponent } from './angular-lib.component';
 
 import { CircleProgressModule } from './circle-progress/circle-progress.module';
 
+
+
 @NgModule({
   declarations: [
     AngularLibComponent,

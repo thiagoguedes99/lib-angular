@@ -10,6 +10,9 @@ import { CircleProgressComponent } from './circle-progress.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    CircleProgressComponent
   ]
 })
 export class CircleProgressModule { }
