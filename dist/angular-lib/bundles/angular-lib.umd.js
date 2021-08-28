@@ -73,6 +73,28 @@
           }] });
 
   var CircleProgressComponent = /** @class */ (function () {
+      // optionsE = {
+      //   percent: 75,
+      //   radius: 60,
+      //   outerStrokeWidth: 10,
+      //   innerStrokeWidth: 10,
+      //   space: -10,
+      //   outerStrokeColor: "#4882c2",
+      //   innerStrokeColor: "#e7e8ea",
+      //   showBackground: false,
+      //   title: 'UI',
+      //   animateTitle: false,
+      //   showUnits: false,
+      //   clockwise: false,
+      //   animationDuration: 1000,
+      //   startFromZero: false,
+      //   outerStrokeGradient: true,
+      //   outerStrokeGradientStopColor: '#53a9ff',
+      //   lazy: true,
+      //   subtitleFormat: (percent: number): string => {
+      //     return `${percent}%`;
+      //   }
+      // }
       function CircleProgressComponent() {
       }
       CircleProgressComponent.prototype.ngOnInit = function () {
@@ -80,7 +102,7 @@
       return CircleProgressComponent;
   }());
   CircleProgressComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressComponent, deps: [], target: i0__namespace.ɵɵFactoryTarget.Component });
-  CircleProgressComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: CircleProgressComponent, selector: "lib-circle-progress", ngImport: i0__namespace, template: "<p>circle-progress works!</p>\n\n<circle-progress\n  [percent]=\"85\"\n  [radius]=\"100\"\n  [outerStrokeWidth]=\"16\"\n  [innerStrokeWidth]=\"8\"\n  [outerStrokeColor]=\"'#78C000'\"\n  [innerStrokeColor]=\"'#C7E596'\"\n  [animation]=\"true\"\n  [animationDuration]=\"300\"\n></circle-progress>", styles: [""], components: [{ type: i1__namespace.CircleProgressComponent, selector: "circle-progress", inputs: ["name", "class", "backgroundGradient", "backgroundColor", "backgroundGradientStopColor", "backgroundOpacity", "backgroundStroke", "backgroundStrokeWidth", "backgroundPadding", "radius", "space", "percent", "toFixed", "maxPercent", "renderOnClick", "units", "unitsFontSize", "unitsFontWeight", "unitsColor", "outerStrokeGradient", "outerStrokeWidth", "outerStrokeColor", "outerStrokeGradientStopColor", "outerStrokeLinecap", "innerStrokeColor", "innerStrokeWidth", "titleFormat", "title", "titleColor", "titleFontSize", "titleFontWeight", "subtitleFormat", "subtitle", "subtitleColor", "subtitleFontSize", "subtitleFontWeight", "imageSrc", "imageHeight", "imageWidth", "animation", "animateTitle", "animateSubtitle", "animationDuration", "showTitle", "showSubtitle", "showUnits", "showImage", "showBackground", "showInnerStroke", "clockwise", "responsive", "startFromZero", "showZeroOuterStroke", "lazy", "options"], outputs: ["onClick"] }] });
+  CircleProgressComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: CircleProgressComponent, selector: "lib-circle-progress", ngImport: i0__namespace, template: "<p>circle-progress works!</p>\n\n<circle-progress\n  [percent]=\"85\"\n  [radius]=\"100\"\n  [outerStrokeWidth]=\"16\"\n  [innerStrokeWidth]=\"8\"\n  [outerStrokeColor]=\"'#78C000'\"\n  [innerStrokeColor]=\"'#C7E596'\"\n  [animation]=\"true\"\n  [animationDuration]=\"300\"\n></circle-progress>\n\n<!-- <circle-progress\n  name=\"E\"\n  [options]=\"optionsE\"\n  [renderOnClick]=\"false\"\n  class=\"copy\"\n  ></circle-progress> -->\n\n  <circle-progress\n\n  [percent]=\"75\"\n  [radius]=\"60\"\n  [outerStrokeWidth]=\"10\"\n  [innerStrokeWidth]=\"10\"\n  [space]=\"-10\"\n  [outerStrokeColor]=\"'#4882c2'\"\n  [innerStrokeColor]=\"'#e7e8ea'\"\n  [showBackground]=\"false\"\n  [title]=\"'UI'\"\n  [animateTitle]=\"false\"\n  [showUnits]=\"false\"\n  [clockwise]=\"false\"\n  [animationDuration]=\"1000\"\n  [startFromZero]=\"false\"\n  [outerStrokeGradient]=\"true\"\n  [outerStrokeGradientStopColor]=\"'#53a9ff'\"\n  [lazy]=\"true\"\n  ></circle-progress>", styles: [""], components: [{ type: i1__namespace.CircleProgressComponent, selector: "circle-progress", inputs: ["name", "class", "backgroundGradient", "backgroundColor", "backgroundGradientStopColor", "backgroundOpacity", "backgroundStroke", "backgroundStrokeWidth", "backgroundPadding", "radius", "space", "percent", "toFixed", "maxPercent", "renderOnClick", "units", "unitsFontSize", "unitsFontWeight", "unitsColor", "outerStrokeGradient", "outerStrokeWidth", "outerStrokeColor", "outerStrokeGradientStopColor", "outerStrokeLinecap", "innerStrokeColor", "innerStrokeWidth", "titleFormat", "title", "titleColor", "titleFontSize", "titleFontWeight", "subtitleFormat", "subtitle", "subtitleColor", "subtitleFontSize", "subtitleFontWeight", "imageSrc", "imageHeight", "imageWidth", "animation", "animateTitle", "animateSubtitle", "animationDuration", "showTitle", "showSubtitle", "showUnits", "showImage", "showBackground", "showInnerStroke", "clockwise", "responsive", "startFromZero", "showZeroOuterStroke", "lazy", "options"], outputs: ["onClick"] }] });
   i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressComponent, decorators: [{
               type: i0.Component,
               args: [{
