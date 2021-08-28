@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { AngularLibComponent } from './angular-lib.component';
 
-
+import { CircleProgressModule } from './circle-progress/circle-progress.module';
 
 @NgModule({
   declarations: [
-    AngularLibComponent
+    AngularLibComponent,
   ],
   imports: [
   ],
   exports: [
-    AngularLibComponent
+    AngularLibComponent,
+    CircleProgressModule
   ]
 })
 export class AngularLibModule { }
