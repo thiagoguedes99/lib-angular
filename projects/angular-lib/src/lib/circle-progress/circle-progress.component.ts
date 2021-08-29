@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'lib-circle-progress',
@@ -30,9 +30,16 @@ export class CircleProgressComponent implements OnInit {
   //   }
   // }
 
+  @Input() percent: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  subtitleFormat(percent: number): string {
+    return `${percent}%`;
+  }
+
 
 }
