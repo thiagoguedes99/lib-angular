@@ -10,6 +10,16 @@ import { FormatService } from '../../../angular-lib/src/public-api';
 })
 export class AppComponent {
   title = 'ng-lib-showcase';
+  colStyle = {
+    backgroundColor: Math.random() > 0.5 ? 'blue' : 'red',
+    height: '50px',
+    display: 'flex',
+    alignItems: 'center',
+    borderRadius: '4px',
+    textAlign: 'center',
+    boxShadow: '0px 6px 8px rgba(0, 0, 0, 0.03)',
+    justifyContent: 'center',
+  };
 
   constructor(private formatService: FormatService) { }
 

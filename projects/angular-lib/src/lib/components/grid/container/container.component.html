@@ -1,0 +1,10 @@
+<main
+  [ngClass]="[
+    'container',
+    full ? 'container__full' : '',
+    className
+  ]"
+  [ngStyle]="style"
+>
+  <ng-content></ng-content>
+</main>

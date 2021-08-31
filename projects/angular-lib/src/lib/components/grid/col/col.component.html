@@ -1,0 +1,32 @@
+<!-- <div [ngClass]="{`col-xs-{{ xs }}`: xs, 'second': true, 'third': false}"> -->
+<div
+  [ngClass]="[
+    xs ? 'col-xs-' + xs : '',
+    xsPush ? 'col-xs-push-' + xsPush : '',
+    xsHidden ? 'col-xs-hidden' : '',
+
+    sm ? 'col-sm-' + sm : '',
+    smPush ? 'col-sm-push-' + smPush : '',
+    smHidden ? 'col-sm-hidden-' : '',
+
+    md ? 'col-md-' + md : '',
+    mdPush ? 'col-md-push-' + mdPush : '',
+    mdHidden ? 'col-md-hidden' : '',
+
+    lg ? 'col-lg-' + lg : '',
+    lgPush ? 'col-lg-push-' + lgPush : '',
+    lgHidden ? 'col-lg-hidden' : '',
+
+    xl ? 'col-xl-' + xl : '',
+    xlPush ? 'col-xl-push-' + xlPush : '',
+    xlHidden ? 'col-xl-hidden' : '',
+
+    noPadding ? 'col-no-padding' : '',
+
+    className
+  ]"
+  [ngStyle]="style"
+>
+
+  <ng-content></ng-content>
+</div>
