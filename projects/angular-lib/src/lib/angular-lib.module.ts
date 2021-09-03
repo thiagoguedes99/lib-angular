@@ -10,6 +10,8 @@ import { ChartCollumnComponent } from './components/chart-collumn/chart-collumn.
 import { CardComponent } from './components/card/card.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { TextComponent } from './components/text/text.component';
+import { IconComponent } from './components/icon/icon.component';
+import { PersonComponent } from './components/icon/icons/person/person.component';
 
 // import { CircleProgressModule } from './circle-progress/circle-progress.module';
 
@@ -24,6 +26,8 @@ import { TextComponent } from './components/text/text.component';
     CardComponent,
     AlertComponent,
     TextComponent,
+    IconComponent,
+    PersonComponent,
   ],
   imports: [
     CommonModule,
@@ -37,7 +41,8 @@ import { TextComponent } from './components/text/text.component';
     ChartCollumnComponent,
     CardComponent,
     AlertComponent,
-    TextComponent
+    TextComponent,
+    IconComponent
     // CircleProgressModule
   ]
 })
