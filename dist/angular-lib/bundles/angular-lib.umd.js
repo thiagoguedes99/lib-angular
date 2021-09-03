@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('ng-circle-progress')) :
-  typeof define === 'function' && define.amd ? define('angular-lib', ['exports', '@angular/core', '@angular/common', 'ng-circle-progress'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['angular-lib'] = {}, global.ng.core, global.ng.common, global.i1$1));
-}(this, (function (exports, i0, i1, i1$1) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('ng-apexcharts'), require('ng-circle-progress')) :
+  typeof define === 'function' && define.amd ? define('angular-lib', ['exports', '@angular/core', '@angular/common', 'ng-apexcharts', 'ng-circle-progress'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['angular-lib'] = {}, global.ng.core, global.ng.common, global.i1$1, global.i1$2));
+}(this, (function (exports, i0, i1, i1$1, i1$2) { 'use strict';
 
   function _interopNamespace(e) {
     if (e && e.__esModule) return e;
@@ -27,6 +27,7 @@
   var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
   var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
   var i1__namespace$1 = /*#__PURE__*/_interopNamespace(i1$1);
+  var i1__namespace$2 = /*#__PURE__*/_interopNamespace(i1$2);
 
   var AngularLibComponent = /** @class */ (function () {
       function AngularLibComponent() {
@@ -145,6 +146,298 @@
                   type: i0.Input
               }] } });
 
+  var CardComponent = /** @class */ (function () {
+      function CardComponent() {
+          this.className = '';
+          this.style = {};
+      }
+      CardComponent.prototype.ngOnInit = function () {
+      };
+      return CardComponent;
+  }());
+  CardComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CardComponent, deps: [], target: i0__namespace.ɵɵFactoryTarget.Component });
+  CardComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: CardComponent, selector: "lib-card", inputs: { className: "className", style: "style" }, ngImport: i0__namespace, template: "<article\n  [ngClass]=\"[\n    'card__container',\n    className\n  ]\"\n  [ngStyle]=\"style\"\n>\n  <ng-content></ng-content>\n</article>", styles: [".card__container{width:100%;background:#FFFFFF;box-shadow:0 3.43611px 3.43611px #cdcdcd40;border-radius:8px}\n"], directives: [{ type: i1__namespace.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1__namespace.NgStyle, selector: "[ngStyle]", inputs: ["ngStyle"] }] });
+  i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CardComponent, decorators: [{
+              type: i0.Component,
+              args: [{
+                      selector: 'lib-card',
+                      templateUrl: './card.component.html',
+                      styleUrls: ['./card.component.css']
+                  }]
+          }], ctorParameters: function () { return []; }, propDecorators: { className: [{
+                  type: i0.Input
+              }], style: [{
+                  type: i0.Input
+              }] } });
+
+  var ChartCollumnComponent = /** @class */ (function () {
+      function ChartCollumnComponent() {
+          // @Input() isHorizontal: boolean | string = false
+          this.isHorizontal = false;
+          this.isYLegend = false;
+          this.chart = i1$1.ChartComponent;
+          // this.dataChart = dataChart;
+          // this.chartOptions = {
+          //   series: [
+          //     {
+          //       // name: "distibuted",
+          //       data: [21, 22, 10]
+          //     }
+          //     // {
+          //     //   name: "distibuted2",
+          //     //   data: [21, 22, 10, 28, 16, 21, 13, 30]
+          //     // }
+          //   ],
+          //   chart: {
+          //     height: 350,
+          //     type: "bar"
+          //     // events: {
+          //     //   click: function (chart, w, e) {
+          //     //     // console.log(chart, w, e)
+          //     //   }
+          //     // }
+          //   },
+          //   colors: [
+          //     "#0095D9",
+          //     "#5A892E",
+          //     "#CB22D7",
+          //     "#F64A00",
+          //     "#355C7D",
+          //     "#AE7B15",
+          //     "#33A49D",
+          //     "#6247DE"
+          //   ],
+          //   plotOptions: {
+          //     bar: {
+          //       columnWidth: "45%",
+          //       distributed: true,
+          //       // horizontal: Boolean(this.isHorizontal)
+          //       horizontal: this.isHorizontal
+          //     }
+          //   },
+          //   dataLabels: {
+          //     enabled: false
+          //   },
+          //   legend: {
+          //     show: false
+          //     // show: true
+          //   },
+          //   grid: {
+          //     show: false
+          //   },
+          //   yaxis: {
+          //     show: true
+          //   },
+          //   xaxis: {
+          //     // show: false,
+          //     categories: [
+          //       // "South Korea",
+          //       "Excelência operacional",
+          //       // ["John", "Doe"],
+          //       ["Joe", "Smith"],
+          //       ["Jake", "Williams"]
+          //     ],
+          //     labels: {
+          //       style: {
+          //         colors: [
+          //           "#008FFB",
+          //           "#00E396",
+          //           "#FEB019",
+          //           "#FF4560",
+          //           "#775DD0",
+          //           "#546E7A",
+          //           "#26a69a",
+          //           "#D10CE8"
+          //         ],
+          //         fontSize: "12px"
+          //       }
+          //     }
+          //   }
+          // };
+      }
+      ChartCollumnComponent.prototype.ngOnInit = function () {
+          console.log(this.chartOptions);
+          console.log(this.isHorizontal);
+          this.chartOptions = {
+              series: [
+                  {
+                      // name: "distibuted",
+                      // data: [21, 22, 10]
+                      data: this.data.map(function (item) { return item.data; })
+                  }
+                  // {
+                  //   name: "distibuted2",
+                  //   data: [21, 22, 10, 28, 16, 21, 13, 30]
+                  // }
+              ],
+              chart: {
+                  height: 350,
+                  type: "bar"
+                  // events: {
+                  //   click: function (chart, w, e) {
+                  //     // console.log(chart, w, e)
+                  //   }
+                  // }
+              },
+              // colors: [
+              //   "#0095D9",
+              //   "#5A892E",
+              //   "#CB22D7",
+              //   "#F64A00",
+              //   "#355C7D",
+              //   "#AE7B15",
+              //   "#33A49D",
+              //   "#6247DE"
+              // ],
+              colors: this.data.map(function (item) { return item.color; }),
+              plotOptions: {
+                  bar: {
+                      columnWidth: "45%",
+                      distributed: true,
+                      // horizontal: Boolean(this.isHorizontal)
+                      horizontal: this.isHorizontal
+                  }
+              },
+              tooltip: {
+                  custom: function (_a) {
+                      var series = _a.series, seriesIndex = _a.seriesIndex, dataPointIndex = _a.dataPointIndex, w = _a.w;
+                      console.log(series);
+                      console.log(seriesIndex);
+                      console.log(dataPointIndex);
+                      console.log(w);
+                      // return '<div class="arrow_box">' +
+                      //   '<p>' + w.config.xaxis.categories[dataPointIndex].join(' ') + '</p>' +
+                      //   '<span style="color: ${color};>' + w.config.colors + '</span>' +
+                      //   '<span>' + series[seriesIndex][dataPointIndex] + '</span>' +
+                      //   '</div>'
+                      return "<div class=\"chart-collumn__tooltip\">\n            <p class=\"chart-collumn__tooltip__title\">" + w.config.xaxis.categories[dataPointIndex].join(' ') + "</p>\n            <span class=\"chart-collumn__tooltip__bullet\" style=\"color: " + w.config.colors[dataPointIndex] + ";\"></span>\n            <span class=\"color: #B2B5BF;\">Valor: </span> <span>" + series[seriesIndex][dataPointIndex] + "</span>\n            </div>";
+                      // return `<lib-card></lib-card>`
+                  }
+                  // custon: CircleProgressComponent
+              },
+              dataLabels: {
+                  enabled: false
+              },
+              legend: {
+                  show: false
+                  // show: true
+              },
+              grid: {
+                  show: false
+              },
+              yaxis: {
+                  show: this.isYLegend
+              },
+              xaxis: {
+                  // show: false,
+                  // categories: [
+                  //   // "South Korea",
+                  //   "Excelência operacional",
+                  //   // ["John", "Doe"],
+                  //   ["Joe", "Smith"],
+                  //   ["Jake", "Williams"]
+                  // ],
+                  categories: this.data.map(function (item) { return item.name.split(' '); }),
+                  labels: {
+                      style: {
+                          // colors: [
+                          //   "#008FFB",
+                          //   "#00E396",
+                          //   "#FEB019",
+                          //   "#FF4560",
+                          //   "#775DD0",
+                          //   "#546E7A",
+                          //   "#26a69a",
+                          //   "#D10CE8"
+                          // ],
+                          // colors: this.data.map((item: string | number | any) => item.color),
+                          fontSize: "12px"
+                      }
+                  }
+              }
+          };
+          console.log(this.chartOptions);
+          console.log(this.isHorizontal);
+      };
+      return ChartCollumnComponent;
+  }());
+  ChartCollumnComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: ChartCollumnComponent, deps: [], target: i0__namespace.ɵɵFactoryTarget.Component });
+  ChartCollumnComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: ChartCollumnComponent, selector: "lib-chart-collumn", inputs: { isHorizontal: "isHorizontal", isYLegend: "isYLegend", data: "data" }, viewQueries: [{ propertyName: "chart", first: true, predicate: ["chart"], descendants: true }], ngImport: i0__namespace, template: "<div id=\"chart\">\n  <apx-chart\n    [series]=\"chartOptions.series\"\n    [chart]=\"chartOptions.chart\"\n    [dataLabels]=\"chartOptions.dataLabels\"\n    [plotOptions]=\"chartOptions.plotOptions\"\n    [yaxis]=\"chartOptions.yaxis\"\n    [xaxis]=\"chartOptions.xaxis\"\n    [legend]=\"chartOptions.legend\"\n    [colors]=\"chartOptions.colors\"\n    [grid]=\"chartOptions.grid\"\n    [tooltip]=\"chartOptions.tooltip\" \n  ></apx-chart>\n</div>\n\n<div class=\"chart-collumn__tooltip\"></div>\n\n<lib-card></lib-card>\n", styles: [".chart-collumn__tooltip{color:red;width:50px;height:50px}.chart-collumn__tooltip__bullet{color:red}.chart-collumn__tooltip__bullet:before{content:\"\\2022\";font-weight:bold;margin-right:5px}\n"], components: [{ type: i1__namespace$1.ChartComponent, selector: "apx-chart", inputs: ["autoUpdateSeries", "chart", "annotations", "colors", "dataLabels", "series", "stroke", "labels", "legend", "markers", "noData", "fill", "tooltip", "plotOptions", "responsive", "xaxis", "yaxis", "grid", "states", "title", "subtitle", "theme"] }, { type: CardComponent, selector: "lib-card", inputs: ["className", "style"] }] });
+  i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: ChartCollumnComponent, decorators: [{
+              type: i0.Component,
+              args: [{
+                      selector: 'lib-chart-collumn',
+                      templateUrl: './chart-collumn.component.html',
+                      styleUrls: ['./chart-collumn.component.css']
+                  }]
+          }], ctorParameters: function () { return []; }, propDecorators: { chart: [{
+                  type: i0.ViewChild,
+                  args: ["chart"]
+              }], isHorizontal: [{
+                  type: i0.Input
+              }], isYLegend: [{
+                  type: i0.Input
+              }], data: [{
+                  type: i0.Input
+              }] } });
+
+  var AlertComponent = /** @class */ (function () {
+      function AlertComponent() {
+          this.color = 'green';
+          this.className = '';
+          this.style = {};
+      }
+      AlertComponent.prototype.ngOnInit = function () {
+      };
+      return AlertComponent;
+  }());
+  AlertComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: AlertComponent, deps: [], target: i0__namespace.ɵɵFactoryTarget.Component });
+  AlertComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: AlertComponent, selector: "lib-alert", inputs: { color: "color", className: "className", style: "style" }, ngImport: i0__namespace, template: "<p>alert works!</p>\n\n\n<div\n  [ngClass]=\"[\n    'disclaimer__container',\n    'disclaimer__' + color,\n    className\n  ]\"\n  [ngStyle]=\"style\"\n>\n  <ng-content></ng-content>\n</div>", styles: [".disclaimer__container{display:flex;align-items:center;border-radius:5px;padding:12px}.disclaimer__red{background:#F8E8E8;border:1px solid #B71C1C}\n"], directives: [{ type: i1__namespace.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1__namespace.NgStyle, selector: "[ngStyle]", inputs: ["ngStyle"] }] });
+  i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: AlertComponent, decorators: [{
+              type: i0.Component,
+              args: [{
+                      selector: 'lib-alert',
+                      templateUrl: './alert.component.html',
+                      styleUrls: ['./alert.component.css']
+                  }]
+          }], ctorParameters: function () { return []; }, propDecorators: { color: [{
+                  type: i0.Input
+              }], className: [{
+                  type: i0.Input
+              }], style: [{
+                  type: i0.Input
+              }] } });
+
+  var TextComponent = /** @class */ (function () {
+      function TextComponent() {
+          this.type = 'normal';
+          this.state = 'normal';
+          this.className = '';
+          this.style = {};
+      }
+      TextComponent.prototype.ngOnInit = function () {
+      };
+      return TextComponent;
+  }());
+  TextComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: TextComponent, deps: [], target: i0__namespace.ɵɵFactoryTarget.Component });
+  TextComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: TextComponent, selector: "lib-text", inputs: { type: "type", state: "state", className: "className", style: "style" }, ngImport: i0__namespace, template: "<!-- <p\n  [ngClass]=\"[\n    'text__container',\n    'text__type-' + type,\n    'text__state-' + state,\n    className\n  ]\"\n  [ngStyle]=\"style\"\n>\n  <ng-content></ng-content>\n</p> -->\n\n<p\n  [ngClass]=\"[\n    'text__container',\n    'text__type--' + type,\n    'text__state--' + state,\n    className\n  ]\"\n  [ngStyle]=\"style\"\n>\n  <ng-content></ng-content>\n</p>\n", styles: [".text__container{font-family:Roboto}.text__type--small{font-size:12px}.text__type--normal{font-size:16px}.text__type--large{font-size:16px}.text__state--normal{font-weight:normal}.text__state--bold{font-weight:500}\n"], directives: [{ type: i1__namespace.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1__namespace.NgStyle, selector: "[ngStyle]", inputs: ["ngStyle"] }] });
+  i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: TextComponent, decorators: [{
+              type: i0.Component,
+              args: [{
+                      selector: 'lib-text',
+                      templateUrl: './text.component.html',
+                      styleUrls: ['./text.component.css']
+                  }]
+          }], ctorParameters: function () { return []; }, propDecorators: { type: [{
+                  type: i0.Input
+              }], state: [{
+                  type: i0.Input
+              }], className: [{
+                  type: i0.Input
+              }], style: [{
+                  type: i0.Input
+              }] } });
+
   // import { CircleProgressModule } from './circle-progress/circle-progress.module';
   var AngularLibModule = /** @class */ (function () {
       function AngularLibModule() {
@@ -154,13 +447,25 @@
   AngularLibModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: AngularLibModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
   AngularLibModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: AngularLibModule, declarations: [AngularLibComponent,
           ColComponent,
-          ContainerComponent], imports: [i1.CommonModule], exports: [AngularLibComponent,
+          ContainerComponent,
+          ChartCollumnComponent,
+          CardComponent,
+          AlertComponent,
+          TextComponent], imports: [i1.CommonModule,
+          i1$1.NgApexchartsModule
+          // CircleProgressModule
+      ], exports: [AngularLibComponent,
+          ContainerComponent,
           ColComponent,
-          ContainerComponent
+          ChartCollumnComponent,
+          CardComponent,
+          AlertComponent,
+          TextComponent
           // CircleProgressModule
       ] });
   AngularLibModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: AngularLibModule, imports: [[
               i1.CommonModule,
+              i1$1.NgApexchartsModule
               // CircleProgressModule
           ]] });
   i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: AngularLibModule, decorators: [{
@@ -170,15 +475,24 @@
                           AngularLibComponent,
                           ColComponent,
                           ContainerComponent,
+                          ChartCollumnComponent,
+                          CardComponent,
+                          AlertComponent,
+                          TextComponent,
                       ],
                       imports: [
                           i1.CommonModule,
+                          i1$1.NgApexchartsModule
                           // CircleProgressModule
                       ],
                       exports: [
                           AngularLibComponent,
+                          ContainerComponent,
                           ColComponent,
-                          ContainerComponent
+                          ChartCollumnComponent,
+                          CardComponent,
+                          AlertComponent,
+                          TextComponent
                           // CircleProgressModule
                       ]
                   }]
@@ -218,7 +532,7 @@
       return CircleProgressComponent;
   }());
   CircleProgressComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressComponent, deps: [], target: i0__namespace.ɵɵFactoryTarget.Component });
-  CircleProgressComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: CircleProgressComponent, selector: "lib-circle-progress", inputs: { percent: "percent" }, ngImport: i0__namespace, template: "<!-- <p>circle-progress works!</p>\n\n<circle-progress\n  [percent]=\"85\"\n  [radius]=\"100\"\n  [outerStrokeWidth]=\"16\"\n  [innerStrokeWidth]=\"8\"\n  [outerStrokeColor]=\"'#78C000'\"\n  [innerStrokeColor]=\"'#C7E596'\"\n  [animation]=\"true\"\n  [animationDuration]=\"300\"\n></circle-progress> -->\n\n<!-- <circle-progress\n  name=\"E\"\n  [options]=\"optionsE\"\n  [renderOnClick]=\"false\"\n  class=\"copy\"\n  ></circle-progress> -->\n\n  <circle-progress\n    [percent]='percent'\n    [radius]=\"60\"\n    [outerStrokeWidth]=\"10\"\n    [innerStrokeWidth]=\"20\"\n    [space]=\"-20\"\n    [outerStrokeColor]=\"'#4882c2'\"\n    [innerStrokeColor]=\"'#e7e8ea'\"\n    [showBackground]=\"false\"\n    [title]=\"subtitleFormat(percent)\"\n    [animateTitle]=\"false\"\n    [showSubtitle]=\"false\"\n    [showUnits]=\"false\"\n    [clockwise]=\"false\"\n    [animationDuration]=\"1000\"\n    [startFromZero]=\"false\"\n    [outerStrokeGradient]=\"true\"\n    [outerStrokeGradientStopColor]=\"'#53a9ff'\"\n    [lazy]=\"true\"\n    [outerStrokeWidth]=\"20\"\n    [outerStrokeLinecap]=\"'butt'\"\n  ></circle-progress>", styles: [""], components: [{ type: i1__namespace$1.CircleProgressComponent, selector: "circle-progress", inputs: ["name", "class", "backgroundGradient", "backgroundColor", "backgroundGradientStopColor", "backgroundOpacity", "backgroundStroke", "backgroundStrokeWidth", "backgroundPadding", "radius", "space", "percent", "toFixed", "maxPercent", "renderOnClick", "units", "unitsFontSize", "unitsFontWeight", "unitsColor", "outerStrokeGradient", "outerStrokeWidth", "outerStrokeColor", "outerStrokeGradientStopColor", "outerStrokeLinecap", "innerStrokeColor", "innerStrokeWidth", "titleFormat", "title", "titleColor", "titleFontSize", "titleFontWeight", "subtitleFormat", "subtitle", "subtitleColor", "subtitleFontSize", "subtitleFontWeight", "imageSrc", "imageHeight", "imageWidth", "animation", "animateTitle", "animateSubtitle", "animationDuration", "showTitle", "showSubtitle", "showUnits", "showImage", "showBackground", "showInnerStroke", "clockwise", "responsive", "startFromZero", "showZeroOuterStroke", "lazy", "options"], outputs: ["onClick"] }] });
+  CircleProgressComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: CircleProgressComponent, selector: "lib-circle-progress", inputs: { percent: "percent" }, ngImport: i0__namespace, template: "<!-- <p>circle-progress works!</p>\n\n<circle-progress\n  [percent]=\"85\"\n  [radius]=\"100\"\n  [outerStrokeWidth]=\"16\"\n  [innerStrokeWidth]=\"8\"\n  [outerStrokeColor]=\"'#78C000'\"\n  [innerStrokeColor]=\"'#C7E596'\"\n  [animation]=\"true\"\n  [animationDuration]=\"300\"\n></circle-progress> -->\n\n<!-- <circle-progress\n  name=\"E\"\n  [options]=\"optionsE\"\n  [renderOnClick]=\"false\"\n  class=\"copy\"\n  ></circle-progress> -->\n\n  <circle-progress\n    [percent]='percent'\n    [radius]=\"60\"\n    [outerStrokeWidth]=\"10\"\n    [innerStrokeWidth]=\"20\"\n    [space]=\"-20\"\n    [outerStrokeColor]=\"'#4882c2'\"\n    [innerStrokeColor]=\"'#e7e8ea'\"\n    [showBackground]=\"false\"\n    [title]=\"subtitleFormat(percent)\"\n    [animateTitle]=\"false\"\n    [showSubtitle]=\"false\"\n    [showUnits]=\"false\"\n    [clockwise]=\"false\"\n    [animationDuration]=\"1000\"\n    [startFromZero]=\"false\"\n    [outerStrokeGradient]=\"true\"\n    [outerStrokeGradientStopColor]=\"'#53a9ff'\"\n    [lazy]=\"true\"\n    [outerStrokeWidth]=\"20\"\n    [outerStrokeLinecap]=\"'butt'\"\n  ></circle-progress>", styles: [""], components: [{ type: i1__namespace$2.CircleProgressComponent, selector: "circle-progress", inputs: ["name", "class", "backgroundGradient", "backgroundColor", "backgroundGradientStopColor", "backgroundOpacity", "backgroundStroke", "backgroundStrokeWidth", "backgroundPadding", "radius", "space", "percent", "toFixed", "maxPercent", "renderOnClick", "units", "unitsFontSize", "unitsFontWeight", "unitsColor", "outerStrokeGradient", "outerStrokeWidth", "outerStrokeColor", "outerStrokeGradientStopColor", "outerStrokeLinecap", "innerStrokeColor", "innerStrokeWidth", "titleFormat", "title", "titleColor", "titleFontSize", "titleFontWeight", "subtitleFormat", "subtitle", "subtitleColor", "subtitleFontSize", "subtitleFontWeight", "imageSrc", "imageHeight", "imageWidth", "animation", "animateTitle", "animateSubtitle", "animationDuration", "showTitle", "showSubtitle", "showUnits", "showImage", "showBackground", "showInnerStroke", "clockwise", "responsive", "startFromZero", "showZeroOuterStroke", "lazy", "options"], outputs: ["onClick"] }] });
   i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressComponent, decorators: [{
               type: i0.Component,
               args: [{
@@ -236,10 +550,10 @@
       return CircleProgressModule;
   }());
   CircleProgressModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
-  CircleProgressModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressModule, declarations: [CircleProgressComponent], imports: [i1.CommonModule, i1__namespace$1.NgCircleProgressModule], exports: [CircleProgressComponent] });
+  CircleProgressModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressModule, declarations: [CircleProgressComponent], imports: [i1.CommonModule, i1__namespace$2.NgCircleProgressModule], exports: [CircleProgressComponent] });
   CircleProgressModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: CircleProgressModule, imports: [[
               i1.CommonModule,
-              i1$1.NgCircleProgressModule.forRoot({
+              i1$2.NgCircleProgressModule.forRoot({
                   // set defaults here
                   radius: 100,
                   outerStrokeWidth: 16,
@@ -257,7 +571,7 @@
                       ],
                       imports: [
                           i1.CommonModule,
-                          i1$1.NgCircleProgressModule.forRoot({
+                          i1$2.NgCircleProgressModule.forRoot({
                               // set defaults here
                               radius: 100,
                               outerStrokeWidth: 16,
@@ -338,13 +652,17 @@
    * Generated bundle index. Do not edit.
    */
 
+  exports.AlertComponent = AlertComponent;
   exports.AngularLibComponent = AngularLibComponent;
   exports.AngularLibModule = AngularLibModule;
+  exports.CardComponent = CardComponent;
+  exports.ChartCollumnComponent = ChartCollumnComponent;
   exports.CircleProgressComponent = CircleProgressComponent;
   exports.CircleProgressModule = CircleProgressModule;
   exports.ColComponent = ColComponent;
   exports.ContainerComponent = ContainerComponent;
   exports.FormatService = FormatService;
+  exports.TextComponent = TextComponent;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 

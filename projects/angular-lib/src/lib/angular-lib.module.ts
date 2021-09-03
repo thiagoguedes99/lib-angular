@@ -32,8 +32,8 @@ import { TextComponent } from './components/text/text.component';
   ],
   exports: [
     AngularLibComponent,
-    ColComponent,
     ContainerComponent,
+    ColComponent,
     ChartCollumnComponent,
     CardComponent,
     AlertComponent,
