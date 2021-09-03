@@ -1,0 +1,22 @@
+.text__container {
+  font-family: Roboto;
+}
+
+.text__type--small {
+  font-size: 12px;
+}
+
+.text__type--normal {
+  font-size: 16px;
+}
+
+.text__type--large {
+  font-size: 16px;
+}
+
+.text__state--normal {
+  font-weight: normal;
+}
+.text__state--bold {
+  font-weight: 500;
+}

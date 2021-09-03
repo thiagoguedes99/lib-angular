@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 
 import { FormatService } from '../../../angular-lib/src/public-api';
 
+type dataChart = {
+  name?: string,
+  data: string | number,
+  color: string,
+} []
 
 @Component({
   selector: 'app-root',
@@ -21,10 +26,32 @@ export class AppComponent {
     justifyContent: 'center',
   };
 
+  isHorizontal = true
+  isYLegend = true
+  dataChart: dataChart | any
+
   constructor(private formatService: FormatService) { }
 
   ngOnInit(): void {
     console.log(this.formatService.date('2020-08-17'))
     console.log(this.formatService.fullDate('2020-08-17'))
+
+    this.dataChart = [
+      {
+        name: 'teste1 test',
+        data: '55',
+        color: '#33A49D'
+      },
+      {
+        name: 'teste2',
+        data: '73',
+        color: '#FF008A'
+      },
+      {
+        name: 'teste3',
+        data: '97',
+        color: '#6A3E3E'
+      }
+    ]
   }
 }

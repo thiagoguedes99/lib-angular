@@ -1,0 +1,15 @@
+.chart-collumn__tooltip {
+  color: red;
+  width: 50px;
+  height: 50px;
+}
+
+.chart-collumn__tooltip__bullet {
+  color: red;
+}
+
+.chart-collumn__tooltip__bullet::before {
+  content: "\2022";
+  font-weight: bold;
+  margin-right: 5px;
+}

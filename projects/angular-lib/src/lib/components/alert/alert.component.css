@@ -1,0 +1,11 @@
+.disclaimer__container {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.disclaimer__red {
+  background: #F8E8E8;
+  border: 1px solid #B71C1C;
+}

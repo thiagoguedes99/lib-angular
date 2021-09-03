@@ -1,0 +1,13 @@
+<p>alert works!</p>
+
+
+<div
+  [ngClass]="[
+    'disclaimer__container',
+    'disclaimer__' + color,
+    className
+  ]"
+  [ngStyle]="style"
+>
+  <ng-content></ng-content>
+</div>
