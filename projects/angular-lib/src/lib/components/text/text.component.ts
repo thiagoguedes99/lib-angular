@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TextComponent implements OnInit {
 
-  @Input() type: 'small' | 'normal' | 'large' = 'normal';
+  @Input() type: 'small' | 'midium' | 'large' = 'midium';
   @Input() state: 'normal' | 'bold'  = 'normal';
 
   @Input() className: string = '';

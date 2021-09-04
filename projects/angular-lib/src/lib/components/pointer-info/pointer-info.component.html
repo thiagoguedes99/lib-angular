@@ -1,0 +1,20 @@
+<div class="pointer-info__container">
+  <span
+    [ngClass]="[
+      'pointer-info__color',
+      type === 'small' ? 'pointer-info__color--small' : '',
+      type === 'midium' ? 'pointer-info__color--midium' : '',
+    ]"
+    [ngStyle]="{'background-color': color}"
+  >
+  </span>
+  <span
+    [ngClass]="[
+      'pointer-info__text',
+      type === 'small' ? 'pointer-info__text--small' : '',
+      type === 'midium' ? 'pointer-info__text--midium' : '',
+    ]"
+  >
+    {{ text }}
+  </span>
+</div>

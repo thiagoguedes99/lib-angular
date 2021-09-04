@@ -60,14 +60,14 @@ small - bold
 </lib-text>
 
 <lib-text
-  type="normal"
+  type="midium"
   state="normal"
   className="testetsetdf"
 >
   normal normal
 </lib-text>
  <lib-text
-  type="normal"
+  type="midium"
   state="bold"
   className="testetsetdf"
 >
@@ -93,11 +93,48 @@ small - bold
  <br>
  <br>
  <br>
+
+ <br>
+ <br>
+ <br>
+ <lib-table>
+  <th *ngFor="let item of myThead">{{ item }}</th>
+  <tr tbody *ngFor="let item of myBody">
+    <td *ngFor="let i of item">{{ i }}</td>
+  </tr>
+ </lib-table>
+ <br>
+ <br>
+ <br>
+
+ <br>
+ <br>
+ <br>
+ <lib-tag text="4.6" color="red"></lib-tag>
+ <br>
+ <br>
+ <lib-tag text="3.0" color="#007A47"></lib-tag>
+ <br>
+ <br>
+ <br>
+ <lib-pointer-info type="midium" text="texto aqui midium" color="red"></lib-pointer-info>
+ 
+ <br>
+
+ <lib-pointer-info type="small" text="texto outro small" color="blue"></lib-pointer-info>
+ <br>
  <br>
  <br>
 
  <lib-icon name="person"></lib-icon>
+ <lib-icon name="refresh"></lib-icon>
+ <lib-icon name="cart"></lib-icon>
+ <lib-icon name="verification"></lib-icon>
+ <lib-icon name="atention"></lib-icon>
 
+ <br>
+ <br>
+ <br>
 
 <lib-container>
   <lib-col xs="12">

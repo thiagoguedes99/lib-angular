@@ -1,0 +1,32 @@
+.pointer-info__container {
+  display: flex;
+  align-items: center;
+}
+
+.pointer-info__color {
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.pointer-info__color--small {
+  height: 8px;
+  width: 8px;
+}
+.pointer-info__color--midium {
+  height: 14px;
+  width: 14px;
+}
+
+.pointer-info__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 25px;
+  color: #89837F;  
+}
+.pointer-info__text--small {
+  font-size: 16px;
+}
+.pointer-info__text--midium {
+  font-size: 12px;
+}

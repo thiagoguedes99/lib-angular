@@ -10,10 +10,11 @@ import { ChartCollumnComponent } from './components/chart-collumn/chart-collumn.
 import { CardComponent } from './components/card/card.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { TextComponent } from './components/text/text.component';
-import { IconComponent } from './components/icon/icon.component';
-import { PersonComponent } from './components/icon/icons/person/person.component';
 
-// import { CircleProgressModule } from './circle-progress/circle-progress.module';
+import { IconModule } from './components/icon/icon.module';
+import { PointerInfoComponent } from './components/pointer-info/pointer-info.component';
+import { TagComponent } from './components/tag/tag.component';
+import { TableComponent } from './components/table/table.component';
 
 
 
@@ -26,13 +27,13 @@ import { PersonComponent } from './components/icon/icons/person/person.component
     CardComponent,
     AlertComponent,
     TextComponent,
-    IconComponent,
-    PersonComponent,
+    PointerInfoComponent,
+    TagComponent,
+    TableComponent,
   ],
   imports: [
     CommonModule,
-    NgApexchartsModule
-    // CircleProgressModule
+    NgApexchartsModule,
   ],
   exports: [
     AngularLibComponent,
@@ -42,8 +43,11 @@ import { PersonComponent } from './components/icon/icons/person/person.component
     CardComponent,
     AlertComponent,
     TextComponent,
-    IconComponent
-    // CircleProgressModule
+    IconModule,
+    PointerInfoComponent,
+    TagComponent,
+    TableComponent
   ]
 })
+
 export class AngularLibModule { }

@@ -28,4 +28,5 @@ import { CircleProgressComponent } from './circle-progress.component';
     CircleProgressComponent
   ]
 })
+
 export class CircleProgressModule { }

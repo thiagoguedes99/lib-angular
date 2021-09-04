@@ -1,0 +1,14 @@
+.tag__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 25px;
+  border-radius: 12.4242px;
+  color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+}

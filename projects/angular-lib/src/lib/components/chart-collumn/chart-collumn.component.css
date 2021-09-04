@@ -1,14 +1,17 @@
-.chart-collumn__tooltip {
-  color: red;
-  width: 50px;
-  height: 50px;
+:host ::ng-deep .chart-collumn__tooltip {
+  padding: 8px;
 }
 
-.chart-collumn__tooltip__bullet {
-  color: red;
+:host ::ng-deep .chart-collumn__tooltip__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 120%;
+  color: #484A4D;
+  margin: 0px 0px 8px 0px;
 }
 
-.chart-collumn__tooltip__bullet::before {
+:host ::ng-deep .chart-collumn__tooltip__bullet::before {
   content: "\2022";
   font-weight: bold;
   margin-right: 5px;

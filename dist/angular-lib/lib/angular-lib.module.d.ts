@@ -8,8 +8,9 @@ import * as i6 from "./components/alert/alert.component";
 import * as i7 from "./components/text/text.component";
 import * as i8 from "@angular/common";
 import * as i9 from "ng-apexcharts";
+import * as i10 from "./components/icon/icon.module";
 export declare class AngularLibModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<AngularLibModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<AngularLibModule, [typeof i1.AngularLibComponent, typeof i2.ColComponent, typeof i3.ContainerComponent, typeof i4.ChartCollumnComponent, typeof i5.CardComponent, typeof i6.AlertComponent, typeof i7.TextComponent], [typeof i8.CommonModule, typeof i9.NgApexchartsModule], [typeof i1.AngularLibComponent, typeof i3.ContainerComponent, typeof i2.ColComponent, typeof i4.ChartCollumnComponent, typeof i5.CardComponent, typeof i6.AlertComponent, typeof i7.TextComponent]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<AngularLibModule, [typeof i1.AngularLibComponent, typeof i2.ColComponent, typeof i3.ContainerComponent, typeof i4.ChartCollumnComponent, typeof i5.CardComponent, typeof i6.AlertComponent, typeof i7.TextComponent], [typeof i8.CommonModule, typeof i9.NgApexchartsModule], [typeof i1.AngularLibComponent, typeof i3.ContainerComponent, typeof i2.ColComponent, typeof i4.ChartCollumnComponent, typeof i5.CardComponent, typeof i6.AlertComponent, typeof i7.TextComponent, typeof i10.IconModule]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<AngularLibModule>;
 }

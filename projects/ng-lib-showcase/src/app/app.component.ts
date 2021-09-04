@@ -30,6 +30,22 @@ export class AppComponent {
   isYLegend = true
   dataChart: dataChart | any
 
+  person: string = 'person'
+  refresh: string = 'refresh'
+
+  myThead = [
+    'titluo 1',
+    'titluo 2',
+    'titluo 3',
+  ]
+
+  myBody = [
+    ['cont 1', 'cont 1', 'cont 1'],
+    ['cont 2', 'cont 2', 'cont 2'],
+    ['cont 3', 'cont 3', 'cont 3'],
+  ]
+
+
   constructor(private formatService: FormatService) { }
 
   ngOnInit(): void {

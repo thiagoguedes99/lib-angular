@@ -1,0 +1,30 @@
+<!-- <p>table works!</p>
+ -->
+
+<table
+  [ngClass]="[
+  'table',
+  'table-responsive',
+  className
+  ]"
+  [ngStyle]="style"
+>
+  <thead>
+    <tr>
+      <!-- {thead.map((item, index) => <th key={index}>{item}</th> )} -->
+      <!-- <th key={index}>{item}</th> -->
+      <ng-content></ng-content>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- {
+      tbody.map((item, index) =>
+        <tr key={index}>
+          {item.map((i, ind) => <td key={ind}>{i}</td> )}
+        </tr>
+      )} -->
+    <!-- <tr> -->
+       <ng-content select="[tbody]"></ng-content>
+    <!-- </tr> -->
+  </tbody>
+</table>
