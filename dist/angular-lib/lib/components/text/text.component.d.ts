@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
 import * as i0 from "@angular/core";
 export declare class TextComponent implements OnInit {
-    type: 'small' | 'normal' | 'large';
+    type: 'small' | 'midium' | 'large';
     state: 'normal' | 'bold';
     className: string;
     style: object;

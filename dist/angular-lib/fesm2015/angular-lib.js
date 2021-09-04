@@ -345,7 +345,7 @@ class ChartCollumnComponent {
     }
 }
 ChartCollumnComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: ChartCollumnComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-ChartCollumnComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: ChartCollumnComponent, selector: "lib-chart-collumn", inputs: { isHorizontal: "isHorizontal", isYLegend: "isYLegend", data: "data" }, viewQueries: [{ propertyName: "chart", first: true, predicate: ["chart"], descendants: true }], ngImport: i0, template: "<div id=\"chart\">\n  <apx-chart\n    [series]=\"chartOptions.series\"\n    [chart]=\"chartOptions.chart\"\n    [dataLabels]=\"chartOptions.dataLabels\"\n    [plotOptions]=\"chartOptions.plotOptions\"\n    [yaxis]=\"chartOptions.yaxis\"\n    [xaxis]=\"chartOptions.xaxis\"\n    [legend]=\"chartOptions.legend\"\n    [colors]=\"chartOptions.colors\"\n    [grid]=\"chartOptions.grid\"\n    [tooltip]=\"chartOptions.tooltip\" \n  ></apx-chart>\n</div>\n\n<div class=\"chart-collumn__tooltip\"></div>\n\n<lib-card></lib-card>\n", styles: [".chart-collumn__tooltip{color:red;width:50px;height:50px}.chart-collumn__tooltip__bullet{color:red}.chart-collumn__tooltip__bullet:before{content:\"\\2022\";font-weight:bold;margin-right:5px}\n"], components: [{ type: i1$1.ChartComponent, selector: "apx-chart", inputs: ["autoUpdateSeries", "chart", "annotations", "colors", "dataLabels", "series", "stroke", "labels", "legend", "markers", "noData", "fill", "tooltip", "plotOptions", "responsive", "xaxis", "yaxis", "grid", "states", "title", "subtitle", "theme"] }, { type: CardComponent, selector: "lib-card", inputs: ["className", "style"] }] });
+ChartCollumnComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: ChartCollumnComponent, selector: "lib-chart-collumn", inputs: { isHorizontal: "isHorizontal", isYLegend: "isYLegend", data: "data" }, viewQueries: [{ propertyName: "chart", first: true, predicate: ["chart"], descendants: true }], ngImport: i0, template: "<div id=\"chart\">\n  <apx-chart\n    [series]=\"chartOptions.series\"\n    [chart]=\"chartOptions.chart\"\n    [dataLabels]=\"chartOptions.dataLabels\"\n    [plotOptions]=\"chartOptions.plotOptions\"\n    [yaxis]=\"chartOptions.yaxis\"\n    [xaxis]=\"chartOptions.xaxis\"\n    [legend]=\"chartOptions.legend\"\n    [colors]=\"chartOptions.colors\"\n    [grid]=\"chartOptions.grid\"\n    [tooltip]=\"chartOptions.tooltip\" \n  ></apx-chart>\n</div>\n\n<div class=\"chart-collumn__tooltip\"></div>\n\n<lib-card></lib-card>\n", styles: [":host ::ng-deep .chart-collumn__tooltip{padding:8px}:host ::ng-deep .chart-collumn__tooltip__title{font-style:normal;font-weight:bold;font-size:16px;line-height:120%;color:#484a4d;margin:0 0 8px}:host ::ng-deep .chart-collumn__tooltip__bullet:before{content:\"\\2022\";font-weight:bold;margin-right:5px}\n"], components: [{ type: i1$1.ChartComponent, selector: "apx-chart", inputs: ["autoUpdateSeries", "chart", "annotations", "colors", "dataLabels", "series", "stroke", "labels", "legend", "markers", "noData", "fill", "tooltip", "plotOptions", "responsive", "xaxis", "yaxis", "grid", "states", "title", "subtitle", "theme"] }, { type: CardComponent, selector: "lib-card", inputs: ["className", "style"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: ChartCollumnComponent, decorators: [{
             type: Component,
             args: [{
@@ -392,7 +392,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
 
 class TextComponent {
     constructor() {
-        this.type = 'normal';
+        this.type = 'midium';
         this.state = 'normal';
         this.className = '';
         this.style = {};
@@ -426,34 +426,154 @@ class PersonComponent {
 }
 PersonComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: PersonComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
 PersonComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: PersonComponent, selector: "lib-person", ngImport: i0, template: `
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <rect width="16" height="16" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 16 0)" fill="url(#pattern0)"/>
-      <defs>
-        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-          <use xlink:href="#image0" transform="translate(-0.17795 -0.227273) scale(0.0222437 0.0227273)"/>
-        </pattern>
-        <image id="image0" width="59" height="62" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA+CAYAAACV6GMAAAACeUlEQVRoBe1ZPcrCQBDNBWy8hFiIldhaaS1YeAUPYWFno6WVYKNg5Q3ECwgqgoIiVjYiYmEj/szHCwjfF+LnamZCSGYgaHbfTObNW9fdjUURMitCXEnJhlVtVVaVDUEFdBiHQERXCqqsa1lC0KjKhkBEVwqqrGtZQtDoq7KXy4Umkwn1ej0aDAY0nU7per36VkZfyD4eDxoOh5TJZMiyrD8X2tAHjLSJkwUJKBmLxahSqdBqtaL7/W5f+I429AEjTVic7Gw2o2QySfV63XXIYhijDxhgJU2U7O12o2q1SsVikY7H40se6AMGWPhImSjZ0+lEpVKJms3m2/yBARY+UiZK9nA4UKFQoG63+zZ/YICFj5SJko2UspH6zWI4RmY2BtlI/c8+CUdiBfV7Zv29NsaKCetktPllorOxXyRMn6NkTStlisP6d7vd0mg0cr3Q58dWT1TZ8/lMrVaLUqnUn22dc5uHe2CAhY+UiZFdLpeUz+cpHo9TrVaj+XzuOhlhglqv1zYGWPjAV8JEyC4WC8pms/ZOZrPZGOcNLHY/8EUMbmMnu9/v7YTL5TLh+6cGH/iC9Df+/z2PnWy73aZ0Ou1JGaiKGIjFaaxkn5vwRqPh6YgFS0zEeLfp/7QQrGTH4zElEgnCp1fjjPXMhZVsv9+nXC5Hu93uGf/rT8RALMTkMlaynKcNn5xymBZDyZpWyolTZZ0VMbzXYWxYqFcw9t+s2yLfS5vJMewrcs52VrI4Ou10OvbrDLzS8HohFuehOStZZyWDdq9kg6YIVz6qLFclgxZHlQ2aIlz5qLJclQxaHFU2aIpw5aPKclUyaHFU2aApwpVPpJT9AYdKlzjjKB/VAAAAAElFTkSuQmCC"/>
-      </defs>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.6667 1.98334H9.88C9.6 1.21646 8.86667 0.661133 8 0.661133C7.13333 0.661133 6.4 1.21646 6.12 1.98334H3.33333C2.6 1.98334 2 2.57834 2 3.30555V12.561C2 13.2882 2.6 13.8832 3.33333 13.8832H12.6667C13.4 13.8832 14 13.2882 14 12.561V3.30555C14 2.57834 13.4 1.98334 12.6667 1.98334ZM8 1.98334C8.36667 1.98334 8.66667 2.28084 8.66667 2.64445C8.66667 3.00806 8.36667 3.30555 8 3.30555C7.63333 3.30555 7.33333 3.00806 7.33333 2.64445C7.33333 2.28084 7.63333 1.98334 8 1.98334ZM8 4.62776C9.10667 4.62776 10 5.51365 10 6.61108C10 7.70852 9.10667 8.5944 8 8.5944C6.89333 8.5944 6 7.70852 6 6.61108C6 5.51365 6.89333 4.62776 8 4.62776ZM12 12.561H4V11.6355C4 10.3133 6.66667 9.58605 8 9.58605C9.33333 9.58605 12 10.3133 12 11.6355V12.561Z" fill="#323232"/>
     </svg>
   `, isInline: true, styles: [""] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: PersonComponent, decorators: [{
             type: Component,
             args: [{
                     selector: 'lib-person',
-                    // templateUrl: './person.component.html',
-                    // template: `<p>person works! 2</p>`,
                     template: `
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <rect width="16" height="16" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 16 0)" fill="url(#pattern0)"/>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.6667 1.98334H9.88C9.6 1.21646 8.86667 0.661133 8 0.661133C7.13333 0.661133 6.4 1.21646 6.12 1.98334H3.33333C2.6 1.98334 2 2.57834 2 3.30555V12.561C2 13.2882 2.6 13.8832 3.33333 13.8832H12.6667C13.4 13.8832 14 13.2882 14 12.561V3.30555C14 2.57834 13.4 1.98334 12.6667 1.98334ZM8 1.98334C8.36667 1.98334 8.66667 2.28084 8.66667 2.64445C8.66667 3.00806 8.36667 3.30555 8 3.30555C7.63333 3.30555 7.33333 3.00806 7.33333 2.64445C7.33333 2.28084 7.63333 1.98334 8 1.98334ZM8 4.62776C9.10667 4.62776 10 5.51365 10 6.61108C10 7.70852 9.10667 8.5944 8 8.5944C6.89333 8.5944 6 7.70852 6 6.61108C6 5.51365 6.89333 4.62776 8 4.62776ZM12 12.561H4V11.6355C4 10.3133 6.66667 9.58605 8 9.58605C9.33333 9.58605 12 10.3133 12 11.6355V12.561Z" fill="#323232"/>
+    </svg>
+  `,
+                    // template: `
+                    //   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    //     <rect width="16" height="16" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 16 0)" fill="url(#pattern1)"/>
+                    //     <defs>
+                    //       <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    //         <use xlink:href="#image1" transform="translate(-0.17795 -0.227273) scale(0.0222437 0.0227273)"/>
+                    //       </pattern>
+                    //       <image id="image1" width="59" height="62" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA+CAYAAACV6GMAAAACeUlEQVRoBe1ZPcrCQBDNBWy8hFiIldhaaS1YeAUPYWFno6WVYKNg5Q3ECwgqgoIiVjYiYmEj/szHCwjfF+LnamZCSGYgaHbfTObNW9fdjUURMitCXEnJhlVtVVaVDUEFdBiHQERXCqqsa1lC0KjKhkBEVwqqrGtZQtDoq7KXy4Umkwn1ej0aDAY0nU7per36VkZfyD4eDxoOh5TJZMiyrD8X2tAHjLSJkwUJKBmLxahSqdBqtaL7/W5f+I429AEjTVic7Gw2o2QySfV63XXIYhijDxhgJU2U7O12o2q1SsVikY7H40se6AMGWPhImSjZ0+lEpVKJms3m2/yBARY+UiZK9nA4UKFQoG63+zZ/YICFj5SJko2UspH6zWI4RmY2BtlI/c8+CUdiBfV7Zv29NsaKCetktPllorOxXyRMn6NkTStlisP6d7vd0mg0cr3Q58dWT1TZ8/lMrVaLUqnUn22dc5uHe2CAhY+UiZFdLpeUz+cpHo9TrVaj+XzuOhlhglqv1zYGWPjAV8JEyC4WC8pms/ZOZrPZGOcNLHY/8EUMbmMnu9/v7YTL5TLh+6cGH/iC9Df+/z2PnWy73aZ0Ou1JGaiKGIjFaaxkn5vwRqPh6YgFS0zEeLfp/7QQrGTH4zElEgnCp1fjjPXMhZVsv9+nXC5Hu93uGf/rT8RALMTkMlaynKcNn5xymBZDyZpWyolTZZ0VMbzXYWxYqFcw9t+s2yLfS5vJMewrcs52VrI4Ou10OvbrDLzS8HohFuehOStZZyWDdq9kg6YIVz6qLFclgxZHlQ2aIlz5qLJclQxaHFU2aIpw5aPKclUyaHFU2aApwpVPpJT9AYdKlzjjKB/VAAAAAElFTkSuQmCC"/>
+                    //     </defs>
+                    //   </svg>
+                    // `,
+                    styleUrls: ['./person.component.css']
+                }]
+        }], ctorParameters: function () { return []; } });
+
+class RefreshComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+RefreshComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: RefreshComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+RefreshComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: RefreshComponent, selector: "lib-refresh", ngImport: i0, template: `
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0)">
+        <path d="M7.99999 3.96666V5.94998L10.6667 3.30555L7.99999 0.661133V2.64445C5.05332 2.64445 2.66666 5.01121 2.66666 7.93329C2.66666 8.97123 2.97332 9.93644 3.49332 10.7496L4.46666 9.78439C4.16666 9.23567 3.99999 8.60101 3.99999 7.93329C3.99999 5.74503 5.79332 3.96666 7.99999 3.96666ZM12.5067 5.11698L11.5333 6.0822C11.8267 6.63752 12 7.26557 12 7.93329C12 10.1215 10.2067 11.8999 7.99999 11.8999V9.91661L5.33332 12.561L7.99999 15.2054V13.2221C10.9467 13.2221 13.3333 10.8554 13.3333 7.93329C13.3333 6.89536 13.0267 5.93014 12.5067 5.11698Z" fill="#323232"/>
+      </g>
       <defs>
-        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-          <use xlink:href="#image0" transform="translate(-0.17795 -0.227273) scale(0.0222437 0.0227273)"/>
-        </pattern>
-        <image id="image0" width="59" height="62" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA+CAYAAACV6GMAAAACeUlEQVRoBe1ZPcrCQBDNBWy8hFiIldhaaS1YeAUPYWFno6WVYKNg5Q3ECwgqgoIiVjYiYmEj/szHCwjfF+LnamZCSGYgaHbfTObNW9fdjUURMitCXEnJhlVtVVaVDUEFdBiHQERXCqqsa1lC0KjKhkBEVwqqrGtZQtDoq7KXy4Umkwn1ej0aDAY0nU7per36VkZfyD4eDxoOh5TJZMiyrD8X2tAHjLSJkwUJKBmLxahSqdBqtaL7/W5f+I429AEjTVic7Gw2o2QySfV63XXIYhijDxhgJU2U7O12o2q1SsVikY7H40se6AMGWPhImSjZ0+lEpVKJms3m2/yBARY+UiZK9nA4UKFQoG63+zZ/YICFj5SJko2UspH6zWI4RmY2BtlI/c8+CUdiBfV7Zv29NsaKCetktPllorOxXyRMn6NkTStlisP6d7vd0mg0cr3Q58dWT1TZ8/lMrVaLUqnUn22dc5uHe2CAhY+UiZFdLpeUz+cpHo9TrVaj+XzuOhlhglqv1zYGWPjAV8JEyC4WC8pms/ZOZrPZGOcNLHY/8EUMbmMnu9/v7YTL5TLh+6cGH/iC9Df+/z2PnWy73aZ0Ou1JGaiKGIjFaaxkn5vwRqPh6YgFS0zEeLfp/7QQrGTH4zElEgnCp1fjjPXMhZVsv9+nXC5Hu93uGf/rT8RALMTkMlaynKcNn5xymBZDyZpWyolTZZ0VMbzXYWxYqFcw9t+s2yLfS5vJMewrcs52VrI4Ou10OvbrDLzS8HohFuehOStZZyWDdq9kg6YIVz6qLFclgxZHlQ2aIlz5qLJclQxaHFU2aIpw5aPKclUyaHFU2aApwpVPpJT9AYdKlzjjKB/VAAAAAElFTkSuQmCC"/>
+        <clipPath id="clip0">
+          <rect width="16" height="15.8665" fill="white"/>
+        </clipPath>
+      </defs>
+    </svg>
+  `, isInline: true, styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: RefreshComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'lib-refresh',
+                    template: `
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0)">
+        <path d="M7.99999 3.96666V5.94998L10.6667 3.30555L7.99999 0.661133V2.64445C5.05332 2.64445 2.66666 5.01121 2.66666 7.93329C2.66666 8.97123 2.97332 9.93644 3.49332 10.7496L4.46666 9.78439C4.16666 9.23567 3.99999 8.60101 3.99999 7.93329C3.99999 5.74503 5.79332 3.96666 7.99999 3.96666ZM12.5067 5.11698L11.5333 6.0822C11.8267 6.63752 12 7.26557 12 7.93329C12 10.1215 10.2067 11.8999 7.99999 11.8999V9.91661L5.33332 12.561L7.99999 15.2054V13.2221C10.9467 13.2221 13.3333 10.8554 13.3333 7.93329C13.3333 6.89536 13.0267 5.93014 12.5067 5.11698Z" fill="#323232"/>
+      </g>
+      <defs>
+        <clipPath id="clip0">
+          <rect width="16" height="15.8665" fill="white"/>
+        </clipPath>
       </defs>
     </svg>
   `,
-                    styleUrls: ['./person.component.css']
+                    // template: `
+                    //   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    //   <rect width="16" height="16" transform="matrix(1 0 0 -1 0 16)" fill="url(#pattern0)"/>
+                    //     <defs>
+                    //       <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    //         <use xlink:href="#image0" transform="translate(-0.0909091) scale(0.0218531 0.0227273)"/>
+                    //       </pattern>
+                    //       <image id="image0" width="52" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAyCAYAAAATIfj2AAAEJklEQVRoBe2Yyyt+QRjH33/AxkJZKSVZSJIsbCixESmSBdlISUpISIoIZSUWsiBkIaJk4VLIxqVcEqJcchdCcsnl++s7/c6by9E7M+95T9KZejvnPefMPPN5LjPPMy78seb6YzxwgH67RR0LORayWQOOy9mscGVxllvo/Pwc/f39yM3NRWRkJFwul/j5+/sjKSkJtbW1WFhYwMvLi/JkZTpYAvT+/o6VlRXk5OTAz88PnHxGRgbq6+vR1taGgYEBNDY2oqyszA0ZHh6O9vZ23N/fy8xT+huvga6urlBeXi5AkpOTMTExgefn5x8nQPijoyMBGxQUhOjoaExNTYHPrWheAW1vbyMxMREREREYHx/H29ub0pwuLi5QWloqlNHZ2WnqhtfX18jMzMTo6KjU2NpAW1tbiI2NRVpaGvb396WEmX3EWOrq6kJgYCCam5u/QU1OTiIsLAyrq6tm3b890wI6OztDamqq+PHe20Z36+vrQ0BAgLga7vf09ISioiKxwMjGmjIQNVpZWYmYmBhsbGx4y+Luz3G5cNB9jXHX19eFdQYHB93febpRBpqZmQGDeXh42NPYpu9fX1+xvLws3PRrzDFeuDqWlJSA1mFcxcXF4fj42HQss4dKQIYLcHm+vb01G8/jM/ZjkHN/opVbW1txenrqXuUYM1TY2NiYiM/q6mpQCbJNCYgLAV1CxQXMJkLL0K3q6uoQGhoq4Ljkc0M+ODhAdnY2goODBdj8/LzZED8+UwLq7e1VdoEfJf9/wdhZW1tDVVWVAODGzMWBFiTY3d2dpyE+vZcGotkrKipQUFCAx8fHT4NY9YdwTIuKi4sFHGNItUkDUVPUWENDg6oMW7+XBrq8vBTJJd3uNzcHqLu72+cGYo6XkJAAHW+QttDDwwPy8/NRU1Pj3jN8Rba5uQmWF3Nzc8oipIE4MheE9PR03NzcKAtS6cDMPSoqCjs7OyrdxLdKQKqZr/JsAJEVMDtgxSubkH6UowR0cnIifLulpcVnbre7uytSIp09iGBKQEzrOzo6RPrDNMjqxs2bNVF8fLyoanXGVwKiAB6CpKSkoLCwEFworGyLi4siQ+jp6dH2AGUgAkxPTyMkJORTMeYtmFE05uXlacWOIV8LiDkXXYNJJLX5ta4xBpe98tCEFTBLem9dWQuIE/0IxbM2nRWJMUk3I4gVMJyXNpABxbMA4ziK+wdBZRpXTOP4i0kvizwrmldAxgT29vbEISNrGO7wTU1NWFpaEhuwceDBs7rDw0OMjIwgKytLHF2xuKNCWAlb1SwB4mQ4cVahRi1jHAGbXY3qVMdNPYFbBvRREN2O1pidncXQ0JA4DmaWwcMRq5f6j3J57xOgr0Ls/O8A2altHVmOhXS0Zmcfx0J2altHlmMhHa3Z2cexkJ3a1pH15yz0D0gIEVAcOsGWAAAAAElFTkSuQmCC"/>
+                    //     </defs>
+                    //   </svg>   
+                    // `,
+                    styleUrls: ['./refresh.component.css']
+                }]
+        }], ctorParameters: function () { return []; } });
+
+class CartComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+CartComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: CartComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+CartComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: CartComponent, selector: "lib-cart", ngImport: i0, template: `
+    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4.70592 12C3.96642 12 3.36809 12.6 3.36809 13.3333C3.36809 14.0666 3.96642 14.6666 4.70592 14.6666C5.44542 14.6666 6.05047 14.0666 6.05047 13.3333C6.05047 12.6 5.44542 12 4.70592 12ZM0.672272 1.33331V2.66665H2.01682L4.43701 7.72665L3.52944 9.35998C3.42188 9.54665 3.36137 9.76665 3.36137 9.99998C3.36137 10.7333 3.96642 11.3333 4.70592 11.3333H12.7732V9.99998H4.98828C4.89416 9.99998 4.82021 9.92665 4.82021 9.83331L4.84038 9.75331L5.44542 8.66665H10.4539C10.9581 8.66665 11.4018 8.39331 11.6304 7.97998L14.0371 3.65331C14.0909 3.55998 14.1178 3.44665 14.1178 3.33331C14.1178 2.96665 13.8152 2.66665 13.4455 2.66665H3.50255L2.87061 1.33331H0.672272ZM11.4287 12C10.6892 12 10.0908 12.6 10.0908 13.3333C10.0908 14.0666 10.6892 14.6666 11.4287 14.6666C12.1682 14.6666 12.7732 14.0666 12.7732 13.3333C12.7732 12.6 12.1682 12 11.4287 12Z" fill="#323232"/>
+    </svg>
+  `, isInline: true, styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: CartComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'lib-cart',
+                    template: `
+    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4.70592 12C3.96642 12 3.36809 12.6 3.36809 13.3333C3.36809 14.0666 3.96642 14.6666 4.70592 14.6666C5.44542 14.6666 6.05047 14.0666 6.05047 13.3333C6.05047 12.6 5.44542 12 4.70592 12ZM0.672272 1.33331V2.66665H2.01682L4.43701 7.72665L3.52944 9.35998C3.42188 9.54665 3.36137 9.76665 3.36137 9.99998C3.36137 10.7333 3.96642 11.3333 4.70592 11.3333H12.7732V9.99998H4.98828C4.89416 9.99998 4.82021 9.92665 4.82021 9.83331L4.84038 9.75331L5.44542 8.66665H10.4539C10.9581 8.66665 11.4018 8.39331 11.6304 7.97998L14.0371 3.65331C14.0909 3.55998 14.1178 3.44665 14.1178 3.33331C14.1178 2.96665 13.8152 2.66665 13.4455 2.66665H3.50255L2.87061 1.33331H0.672272ZM11.4287 12C10.6892 12 10.0908 12.6 10.0908 13.3333C10.0908 14.0666 10.6892 14.6666 11.4287 14.6666C12.1682 14.6666 12.7732 14.0666 12.7732 13.3333C12.7732 12.6 12.1682 12 11.4287 12Z" fill="#323232"/>
+    </svg>
+  `,
+                    styleUrls: ['./cart.component.css']
+                }]
+        }], ctorParameters: function () { return []; } });
+
+class VerificationComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+VerificationComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: VerificationComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+VerificationComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: VerificationComponent, selector: "lib-verification", ngImport: i0, template: `
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11.0667 7.1928L10.12 6.25403L7.29333 9.06373L5.88 7.65557L4.93333 8.59434L7.29333 10.9347L11.0667 7.1928Z" fill="#323232"/>
+      <path d="M12.6667 2.64441H3.33333C2.59333 2.64441 2 3.2394 2 3.96662V11.8999C2 12.6271 2.59333 13.2221 3.33333 13.2221H12.6667C13.4 13.2221 14 12.6271 14 11.8999V3.96662C14 3.2394 13.4067 2.64441 12.6667 2.64441ZM12.6667 11.8999H3.33333V5.28883H12.6667V11.8999Z" fill="#323232"/>
+    </svg>  
+  `, isInline: true, styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: VerificationComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'lib-verification',
+                    template: `
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11.0667 7.1928L10.12 6.25403L7.29333 9.06373L5.88 7.65557L4.93333 8.59434L7.29333 10.9347L11.0667 7.1928Z" fill="#323232"/>
+      <path d="M12.6667 2.64441H3.33333C2.59333 2.64441 2 3.2394 2 3.96662V11.8999C2 12.6271 2.59333 13.2221 3.33333 13.2221H12.6667C13.4 13.2221 14 12.6271 14 11.8999V3.96662C14 3.2394 13.4067 2.64441 12.6667 2.64441ZM12.6667 11.8999H3.33333V5.28883H12.6667V11.8999Z" fill="#323232"/>
+    </svg>  
+  `,
+                    styleUrls: ['./verification.component.css']
+                }]
+        }], ctorParameters: function () { return []; } });
+
+class AtentionComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+AtentionComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: AtentionComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+AtentionComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: AtentionComponent, selector: "lib-atention", ngImport: i0, template: `
+    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 19H22L11 0L0 19ZM12 16H10V14H12V16ZM12 12H10V8H12V12Z" fill="#B71C1C"/>
+    </svg>  
+  `, isInline: true, styles: [""] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: AtentionComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'lib-atention',
+                    template: `
+    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 19H22L11 0L0 19ZM12 16H10V14H12V16ZM12 12H10V8H12V12Z" fill="#B71C1C"/>
+    </svg>  
+  `,
+                    styleUrls: ['./atention.component.css']
                 }]
         }], ctorParameters: function () { return []; } });
 
@@ -462,10 +582,13 @@ class IconComponent {
         this.name = '';
     }
     ngOnInit() {
+        console.log('ngOnInit Icon inicio');
+        console.log(this.name);
+        console.log('ngOnInit Icon final');
     }
 }
 IconComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: IconComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-IconComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: IconComponent, selector: "lib-icon", inputs: { name: "name" }, ngImport: i0, template: "<p>icon works!</p>\n<!-- <img src='{{ \"assets/images/\" + wonder.id + \".jpg\" }}' -->\n\n<!-- <img src=\"\" alt=\"\" srcset=\"\"> -->\n<!-- <img src='{{ \"./icons/\" + name + \".svg\" }}'>\n<img src='{{ \"icons/\" + name + \".svg\" }}'>\n<img src='{{ \"/icons/\" + name + \".svg\" }}'>\n\n<img #userImage src='{{ \"/icons/\" + name + \".svg\" }}'> -->\n\n<!-- <img src='{{ total }}'> -->\n\n<!-- \n<object *ngIf=\"currentSVG\" type=\"image/svg+xml\" [data]=\"SVGFile\"></object>\n<object type=\"image/svg+xml\" [data]=\"SVGFile\"></object>\n\n -->\n\n<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n  <rect width=\"16\" height=\"16\" transform=\"matrix(-1 -8.74228e-08 -8.74228e-08 1 16 0)\" fill=\"url(#pattern0)\"/>\n  <defs>\n  <pattern id=\"pattern0\" patternContentUnits=\"objectBoundingBox\" width=\"1\" height=\"1\">\n  <use xlink:href=\"#image0\" transform=\"translate(-0.17795 -0.227273) scale(0.0222437 0.0227273)\"/>\n  </pattern>\n  <image id=\"image0\" width=\"59\" height=\"62\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA+CAYAAACV6GMAAAACeUlEQVRoBe1ZPcrCQBDNBWy8hFiIldhaaS1YeAUPYWFno6WVYKNg5Q3ECwgqgoIiVjYiYmEj/szHCwjfF+LnamZCSGYgaHbfTObNW9fdjUURMitCXEnJhlVtVVaVDUEFdBiHQERXCqqsa1lC0KjKhkBEVwqqrGtZQtDoq7KXy4Umkwn1ej0aDAY0nU7per36VkZfyD4eDxoOh5TJZMiyrD8X2tAHjLSJkwUJKBmLxahSqdBqtaL7/W5f+I429AEjTVic7Gw2o2QySfV63XXIYhijDxhgJU2U7O12o2q1SsVikY7H40se6AMGWPhImSjZ0+lEpVKJms3m2/yBARY+UiZK9nA4UKFQoG63+zZ/YICFj5SJko2UspH6zWI4RmY2BtlI/c8+CUdiBfV7Zv29NsaKCetktPllorOxXyRMn6NkTStlisP6d7vd0mg0cr3Q58dWT1TZ8/lMrVaLUqnUn22dc5uHe2CAhY+UiZFdLpeUz+cpHo9TrVaj+XzuOhlhglqv1zYGWPjAV8JEyC4WC8pms/ZOZrPZGOcNLHY/8EUMbmMnu9/v7YTL5TLh+6cGH/iC9Df+/z2PnWy73aZ0Ou1JGaiKGIjFaaxkn5vwRqPh6YgFS0zEeLfp/7QQrGTH4zElEgnCp1fjjPXMhZVsv9+nXC5Hu93uGf/rT8RALMTkMlaynKcNn5xymBZDyZpWyolTZZ0VMbzXYWxYqFcw9t+s2yLfS5vJMewrcs52VrI4Ou10OvbrDLzS8HohFuehOStZZyWDdq9kg6YIVz6qLFclgxZHlQ2aIlz5qLJclQxaHFU2aIpw5aPKclUyaHFU2aApwpVPpJT9AYdKlzjjKB/VAAAAAElFTkSuQmCC\"/>\n  </defs>\n</svg>\n\n\n<lib-person *ngIf=\"name === 'person'\"></lib-person>", styles: [""], components: [{ type: PersonComponent, selector: "lib-person" }], directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] });
+IconComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: IconComponent, selector: "lib-icon", inputs: { name: "name" }, ngImport: i0, template: "<lib-person *ngIf=\"name === 'person'\"></lib-person>\n\n<lib-refresh *ngIf=\"name === 'refresh'\"></lib-refresh>\n\n<lib-cart *ngIf=\"name === 'cart'\"></lib-cart>\n\n<lib-verification *ngIf=\"name === 'verification'\"></lib-verification>\n\n<lib-atention *ngIf=\"name === 'atention'\"></lib-atention>", styles: [""], components: [{ type: PersonComponent, selector: "lib-person" }, { type: RefreshComponent, selector: "lib-refresh" }, { type: CartComponent, selector: "lib-cart" }, { type: VerificationComponent, selector: "lib-verification" }, { type: AtentionComponent, selector: "lib-atention" }], directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: IconComponent, decorators: [{
             type: Component,
             args: [{
@@ -481,7 +604,11 @@ class IconModule {
 }
 IconModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: IconModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
 IconModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: IconModule, declarations: [IconComponent,
-        PersonComponent], imports: [CommonModule], exports: [IconComponent] });
+        PersonComponent,
+        RefreshComponent,
+        CartComponent,
+        VerificationComponent,
+        AtentionComponent], imports: [CommonModule], exports: [IconComponent] });
 IconModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: IconModule, imports: [[
             CommonModule,
         ]] });
@@ -491,6 +618,10 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
                     declarations: [
                         IconComponent,
                         PersonComponent,
+                        RefreshComponent,
+                        CartComponent,
+                        VerificationComponent,
+                        AtentionComponent,
                     ],
                     imports: [
                         CommonModule,
@@ -501,6 +632,84 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
                 }]
         }] });
 
+class PointerInfoComponent {
+    constructor() {
+        this.color = '';
+        this.text = '';
+        this.type = 'midium';
+    }
+    ngOnInit() {
+    }
+}
+PointerInfoComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: PointerInfoComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+PointerInfoComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: PointerInfoComponent, selector: "lib-pointer-info", inputs: { color: "color", text: "text", type: "type" }, ngImport: i0, template: "<div class=\"pointer-info__container\">\n  <span\n    [ngClass]=\"[\n      'pointer-info__color',\n      type === 'small' ? 'pointer-info__color--small' : '',\n      type === 'midium' ? 'pointer-info__color--midium' : '',\n    ]\"\n    [ngStyle]=\"{'background-color': color}\"\n  >\n  </span>\n  <span\n    [ngClass]=\"[\n      'pointer-info__text',\n      type === 'small' ? 'pointer-info__text--small' : '',\n      type === 'midium' ? 'pointer-info__text--midium' : '',\n    ]\"\n  >\n    {{ text }}\n  </span>\n</div>", styles: [".pointer-info__container{display:flex;align-items:center}.pointer-info__color{display:inline-block;border-radius:50%;margin-right:8px}.pointer-info__color--small{height:8px;width:8px}.pointer-info__color--midium{height:14px;width:14px}.pointer-info__text{font-family:Roboto;font-style:normal;font-weight:normal;line-height:25px;color:#89837f}.pointer-info__text--small{font-size:16px}.pointer-info__text--midium{font-size:12px}\n"], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgStyle, selector: "[ngStyle]", inputs: ["ngStyle"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: PointerInfoComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'lib-pointer-info',
+                    templateUrl: './pointer-info.component.html',
+                    styleUrls: ['./pointer-info.component.css']
+                }]
+        }], ctorParameters: function () { return []; }, propDecorators: { color: [{
+                type: Input
+            }], text: [{
+                type: Input
+            }], type: [{
+                type: Input
+            }] } });
+
+class TagComponent {
+    constructor() {
+        this.color = '';
+        this.text = '';
+    }
+    ngOnInit() {
+    }
+}
+TagComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: TagComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+TagComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: TagComponent, selector: "lib-tag", inputs: { color: "color", text: "text" }, ngImport: i0, template: "<span\n  class=\"tag__container\"\n  [ngStyle]=\"{'background-color': color}\"\n>\n  {{ text }}\n</span>", styles: [".tag__container{display:flex;align-items:center;justify-content:center;width:52px;height:25px;border-radius:12.4242px;color:#fff;font-family:Roboto;font-style:normal;font-weight:normal;font-size:14px;line-height:25px}\n"], directives: [{ type: i1.NgStyle, selector: "[ngStyle]", inputs: ["ngStyle"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: TagComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'lib-tag',
+                    templateUrl: './tag.component.html',
+                    styleUrls: ['./tag.component.css']
+                }]
+        }], ctorParameters: function () { return []; }, propDecorators: { color: [{
+                type: Input
+            }], text: [{
+                type: Input
+            }] } });
+
+class TableComponent {
+    constructor() {
+        this.thead = [];
+        this.tbody = [];
+        this.className = '';
+        this.style = {};
+    }
+    ngOnInit() {
+    }
+}
+TableComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: TableComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+TableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: TableComponent, selector: "lib-table", inputs: { thead: "thead", tbody: "tbody", className: "className", style: "style" }, ngImport: i0, template: "<!-- <p>table works!</p>\n -->\n\n<table\n  [ngClass]=\"[\n  'table',\n  'table-responsive',\n  className\n  ]\"\n  [ngStyle]=\"style\"\n>\n  <thead>\n    <tr>\n      <!-- {thead.map((item, index) => <th key={index}>{item}</th> )} -->\n      <!-- <th key={index}>{item}</th> -->\n      <ng-content></ng-content>\n    </tr>\n  </thead>\n  <tbody>\n    <!-- {\n      tbody.map((item, index) =>\n        <tr key={index}>\n          {item.map((i, ind) => <td key={ind}>{i}</td> )}\n        </tr>\n      )} -->\n    <!-- <tr> -->\n       <ng-content select=\"[tbody]\"></ng-content>\n    <!-- </tr> -->\n  </tbody>\n</table>\n", styles: [":host ::ng-deep .table{max-width:100%;background-color:transparent;border-collapse:collapse;border-spacing:0;font-family:arial}:host ::ng-deep .table{width:100%}:host ::ng-deep .table th,:host ::ng-deep .table td{font-size:14px;padding:8px;line-height:20px;text-align:left;vertical-align:middle}:host ::ng-deep .table tbody tr:last-child>td{border-bottom:none}:host ::ng-deep .table tbody td{line-height:17px;border-bottom:#F0F1F2 solid 1px;padding-top:16px;padding-bottom:16px;color:#484a4d}:host ::ng-deep .table td:last-child{border-right:0}:host ::ng-deep .table thead th{color:#b2b5bf}:host ::ng-deep .table thead th *,:host ::ng-deep .table tbody td *{display:block}@media (max-width: 800px){:host ::ng-deep .table tbody td{border-bottom:none;border-right:#F0F1F2 solid 1px;padding:8px 15px}:host ::ng-deep .table td:last-child{border-right:#F0F1F2 solid 1px}:host ::ng-deep .table-responsive{display:block;position:relative;width:100%}:host ::ng-deep .table-responsive thead,:host ::ng-deep .table-responsive tbody,:host ::ng-deep .table-responsive th,:host ::ng-deep .table-responsive td,:host ::ng-deep .table-responsive tr{display:block}:host ::ng-deep .table-responsive td,:host ::ng-deep .table-responsive th{height:50px}:host ::ng-deep .table td{height:50}:host ::ng-deep .table-responsive thead{float:left}:host ::ng-deep .table-responsive tbody{width:auto;position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}:host ::ng-deep .table-responsive tbody tr{display:inline-block}}\n"], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgStyle, selector: "[ngStyle]", inputs: ["ngStyle"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: TableComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'lib-table',
+                    templateUrl: './table.component.html',
+                    styleUrls: ['./table.component.css']
+                }]
+        }], ctorParameters: function () { return []; }, propDecorators: { thead: [{
+                type: Input
+            }], tbody: [{
+                type: Input
+            }], className: [{
+                type: Input
+            }], style: [{
+                type: Input
+            }] } });
+
 class AngularLibModule {
 }
 AngularLibModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: AngularLibModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
@@ -510,7 +719,10 @@ AngularLibModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", versio
         ChartCollumnComponent,
         CardComponent,
         AlertComponent,
-        TextComponent], imports: [CommonModule,
+        TextComponent,
+        PointerInfoComponent,
+        TagComponent,
+        TableComponent], imports: [CommonModule,
         NgApexchartsModule], exports: [AngularLibComponent,
         ContainerComponent,
         ColComponent,
@@ -518,7 +730,10 @@ AngularLibModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", versio
         CardComponent,
         AlertComponent,
         TextComponent,
-        IconModule] });
+        IconModule,
+        PointerInfoComponent,
+        TagComponent,
+        TableComponent] });
 AngularLibModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: AngularLibModule, imports: [[
             CommonModule,
             NgApexchartsModule,
@@ -534,6 +749,9 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
                         CardComponent,
                         AlertComponent,
                         TextComponent,
+                        PointerInfoComponent,
+                        TagComponent,
+                        TableComponent,
                     ],
                     imports: [
                         CommonModule,
@@ -547,7 +765,10 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
                         CardComponent,
                         AlertComponent,
                         TextComponent,
-                        IconModule
+                        IconModule,
+                        PointerInfoComponent,
+                        TagComponent,
+                        TableComponent
                     ]
                 }]
         }] });
@@ -697,5 +918,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { AlertComponent, AngularLibComponent, AngularLibModule, CardComponent, ChartCollumnComponent, CircleProgressComponent, CircleProgressModule, ColComponent, ContainerComponent, FormatService, IconComponent, IconModule, TextComponent };
+export { AlertComponent, AngularLibComponent, AngularLibModule, CardComponent, ChartCollumnComponent, CircleProgressComponent, CircleProgressModule, ColComponent, ContainerComponent, FormatService, IconComponent, IconModule, PointerInfoComponent, TableComponent, TagComponent, TextComponent };
 //# sourceMappingURL=angular-lib.js.map
