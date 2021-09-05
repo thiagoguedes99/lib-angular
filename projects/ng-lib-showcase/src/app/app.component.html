@@ -25,7 +25,7 @@
 <lib-card>
   sdljfhfklhbsl
 </lib-card>
- 
+
 <br>
  <br>
  <br>
@@ -35,8 +35,7 @@
   color="red"
 >
   aaaaaaaa
-</lib-alert
->
+</lib-alert>
 
 <br>
  <br>
@@ -137,7 +136,13 @@ small - bold
  <br>
 
 <lib-container>
-  <lib-col xs="12">
+  <!-- <lib-col xs="12"> -->
+  <!-- <lib-col xs="12" style="padding-right: 10px; padding-top: 10px;"> -->
+  <!-- <lib-col xs="12" style="{paddingRight: 10px, paddingTop: 10px}"> -->
+  <!-- <lib-col xs="12" style="padding-right: 10px; padding-top: 10px"> -->
+  <!-- <lib-col xs="12" style="display: flex"> -->
+  <lib-col xs="12" [style]="myStyle">
+  <!-- <lib-col xs="12" style="paddingRight: 11px; paddingTop: 10px;"> -->
     <div [ngStyle]="colStyle">
       xs=12
     </div>

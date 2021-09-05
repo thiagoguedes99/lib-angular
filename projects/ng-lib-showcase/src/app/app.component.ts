@@ -45,6 +45,8 @@ export class AppComponent {
     ['cont 3', 'cont 3', 'cont 3'],
   ]
 
+  myStyle = { display: 'flex' }
+
 
   constructor(private formatService: FormatService) { }
 
