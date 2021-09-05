@@ -55,6 +55,7 @@ export class ChartCollumnComponent implements OnInit {
   // @Input() isHorizontal: boolean | string = false
   @Input() isHorizontal: boolean = false
   @Input() isYLegend: boolean = false
+  @Input() height: string | number = '266'
   @Input() data: dataChart | any
 
   constructor() {
@@ -159,7 +160,8 @@ export class ChartCollumnComponent implements OnInit {
         // }
       ],
       chart: {
-        height: 350,
+        // height: '200',
+        height: this.height,
         type: "bar"
         // events: {
         //   click: function (chart, w, e) {
