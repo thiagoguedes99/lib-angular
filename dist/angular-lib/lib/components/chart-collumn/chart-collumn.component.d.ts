@@ -33,10 +33,11 @@ export declare class ChartCollumnComponent implements OnInit {
     chartOptions: Partial<ChartOptions> | any;
     isHorizontal: boolean;
     isYLegend: boolean;
+    height: string | number;
     data: dataChart | any;
     constructor();
     ngOnInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChartCollumnComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChartCollumnComponent, "lib-chart-collumn", never, { "isHorizontal": "isHorizontal"; "isYLegend": "isYLegend"; "data": "data"; }, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChartCollumnComponent, "lib-chart-collumn", never, { "isHorizontal": "isHorizontal"; "isYLegend": "isYLegend"; "height": "height"; "data": "data"; }, {}, never, never>;
 }
 export {};
