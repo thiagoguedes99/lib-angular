@@ -33,6 +33,7 @@
  <br>
 <lib-alert
   color="red"
+  [style]="{ marginBottom: '32px', position: 'sticky', top: '10px' }"
 >
   aaaaaaaa
 </lib-alert>
@@ -124,8 +125,17 @@ small - bold
  <br>
  <br>
  <br>
+ <div style="display: flex; justify-content: center;">
+  <lib-pointer-info color="green" text="Baixo" className="dashboard-component__pointer-info--space-right"></lib-pointer-info>
+  <!-- <lib-pointer-info color="yellow" text="Médio" [ngStyle]="{'display': 'flex', 'justify-content': 'center'}"></lib-pointer-info> -->
+  <lib-pointer-info color="yellow" text="Médio" [ngStyle]="{'margin-right': '32px'}"></lib-pointer-info>
+  <lib-pointer-info color="red" text="Critico"></lib-pointer-info>
+</div>
+ <br>
+ <br>
+ <br>
 
- <lib-icon name="person"></lib-icon>
+ <lib-icon name="person" [style]="{ marginBottom: '32px' }"></lib-icon>
  <lib-icon name="refresh"></lib-icon>
  <lib-icon name="cart"></lib-icon>
  <lib-icon name="verification"></lib-icon>

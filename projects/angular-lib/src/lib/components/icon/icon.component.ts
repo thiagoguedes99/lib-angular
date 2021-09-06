@@ -9,6 +9,8 @@ export class IconComponent implements OnInit {
 
   @Input() name: string = ''
 
+  @Input() style: object = {};
+
   constructor() {}
 
   ngOnInit(): void {
