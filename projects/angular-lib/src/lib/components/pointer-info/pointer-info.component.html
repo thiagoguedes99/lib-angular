@@ -1,4 +1,10 @@
-<div class="pointer-info__container">
+<div
+  [ngClass]="[
+    'pointer-info__container',
+    className
+  ]"
+  [ngStyle]="style"
+>
   <span
     [ngClass]="[
       'pointer-info__color',

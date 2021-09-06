@@ -11,6 +11,10 @@ export class PointerInfoComponent implements OnInit {
   @Input() text: string = ''
   @Input() type: 'small' | 'midium' | 'large' = 'midium';
 
+  @Input() className: string = '';
+  @Input() style: object = {};
+
+
   constructor() { }
 
   ngOnInit(): void {

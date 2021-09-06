@@ -1,5 +1,5 @@
 .pointer-info__container {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
