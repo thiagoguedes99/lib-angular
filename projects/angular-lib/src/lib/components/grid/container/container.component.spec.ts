@@ -22,4 +22,44 @@ describe('ContainerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should validade if has style props', ()=> {
+    component.style = { color: 'red' };
+
+    fixture.detectChanges();
+
+    const contentComponent: HTMLElement = fixture.nativeElement;
+
+    expect(contentComponent.children[0].getAttribute('style')).toBe('color: red;');
+  })
+
+  it('should has the css class default of component', () => {
+    const contentComponent: HTMLElement = fixture.nativeElement;
+
+    expect(contentComponent.children[0].className).toBe('container');
+  });
+
+  describe('should validade with props', () => {
+    it('should validade if has className props', ()=> {
+      component.className = 'teste-of-class';
+
+      fixture.detectChanges();
+
+      const contentComponent: HTMLElement = fixture.nativeElement;
+
+      expect(contentComponent.children[0].className).toBe('container teste-of-class');
+    })
+
+    it('should validade if has className props', ()=> {
+      component.full = true;
+
+      fixture.detectChanges();
+
+      const contentComponent: HTMLElement = fixture.nativeElement;
+
+      expect(contentComponent.children[0].className).toBe('container container__full');
+    })
+
+  });
+
 });

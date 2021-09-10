@@ -16,6 +16,15 @@ describe('ChartCollumnComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ChartCollumnComponent);
     component = fixture.componentInstance;
+
+    component.data = [
+      {
+        name: 'Excelência operacional',
+        data: '55',
+        color: '#33A49D'
+      }
+    ]
+
     fixture.detectChanges();
   });
 
