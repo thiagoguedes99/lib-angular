@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, Input, ViewEncapsulation, ViewChild, NgModule, Injectable } from '@angular/core';
+import { Component, Input, ViewChild, ViewEncapsulation, NgModule, Injectable } from '@angular/core';
 import * as i1 from '@angular/common';
 import { CommonModule } from '@angular/common';
 import * as i1$1 from 'ng-apexcharts';
@@ -128,6 +128,86 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
                 type: Input
             }] } });
 
+class ChartCollumnComponent {
+    constructor() {
+        this.isHorizontal = false;
+        this.isYLegend = false;
+        this.height = '266';
+        this.chart = ChartComponent;
+    }
+    ngOnInit() {
+        this.chartOptions = {
+            series: [
+                {
+                    data: this.data.map((item) => item.data)
+                }
+            ],
+            chart: {
+                height: this.height,
+                type: "bar"
+            },
+            colors: this.data.map((item) => item.color),
+            plotOptions: {
+                bar: {
+                    columnWidth: "45%",
+                    distributed: true,
+                    horizontal: this.isHorizontal
+                }
+            },
+            tooltip: {
+                custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+                    return `<div class="chart-collumn__tooltip">
+            <p class="chart-collumn__tooltip__title">${w.config.xaxis.categories[dataPointIndex].join(' ')}</p>
+            <span class="chart-collumn__tooltip__bullet" style="color: ${w.config.colors[dataPointIndex]};"></span>
+            <span class="color: #B2B5BF;">Valor: </span> <span>${series[seriesIndex][dataPointIndex]}</span>
+            </div>`;
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            legend: {
+                show: false
+            },
+            grid: {
+                show: false
+            },
+            yaxis: {
+                show: this.isYLegend
+            },
+            xaxis: {
+                categories: this.data.map((item) => item.name.split(' ')),
+                labels: {
+                    style: {
+                        fontSize: "12px"
+                    }
+                }
+            }
+        };
+    }
+}
+ChartCollumnComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: ChartCollumnComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ChartCollumnComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: ChartCollumnComponent, selector: "lib-chart-collumn", inputs: { isHorizontal: "isHorizontal", isYLegend: "isYLegend", height: "height", data: "data" }, viewQueries: [{ propertyName: "chart", first: true, predicate: ["chart"], descendants: true }], ngImport: i0, template: "<div id=\"chart\">\n  <apx-chart\n    [series]=\"chartOptions.series\"\n    [chart]=\"chartOptions.chart\"\n    [dataLabels]=\"chartOptions.dataLabels\"\n    [plotOptions]=\"chartOptions.plotOptions\"\n    [yaxis]=\"chartOptions.yaxis\"\n    [xaxis]=\"chartOptions.xaxis\"\n    [legend]=\"chartOptions.legend\"\n    [colors]=\"chartOptions.colors\"\n    [grid]=\"chartOptions.grid\"\n    [tooltip]=\"chartOptions.tooltip\" \n  ></apx-chart>\n</div>\n\n<!-- <div class=\"chart-collumn__tooltip\"></div>\n\n<lib-card></lib-card> -->\n", styles: [":host ::ng-deep .chart-collumn__tooltip{padding:8px}:host ::ng-deep .chart-collumn__tooltip__title{font-style:normal;font-weight:bold;font-size:16px;line-height:120%;color:#484a4d;margin:0 0 8px}:host ::ng-deep .chart-collumn__tooltip__bullet:before{content:\"\\2022\";font-weight:bold;margin-right:5px}\n"], components: [{ type: i1$1.ChartComponent, selector: "apx-chart", inputs: ["autoUpdateSeries", "chart", "annotations", "colors", "dataLabels", "series", "stroke", "labels", "legend", "markers", "noData", "fill", "tooltip", "plotOptions", "responsive", "xaxis", "yaxis", "grid", "states", "title", "subtitle", "theme"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: ChartCollumnComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'lib-chart-collumn',
+                    templateUrl: './chart-collumn.component.html',
+                    styleUrls: ['./chart-collumn.component.css']
+                }]
+        }], ctorParameters: function () { return []; }, propDecorators: { chart: [{
+                type: ViewChild,
+                args: ["chart"]
+            }], isHorizontal: [{
+                type: Input
+            }], isYLegend: [{
+                type: Input
+            }], height: [{
+                type: Input
+            }], data: [{
+                type: Input
+            }] } });
+
 class CardComponent {
     constructor() {
         this.className = '';
@@ -149,223 +229,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
         }], ctorParameters: function () { return []; }, propDecorators: { className: [{
                 type: Input
             }], style: [{
-                type: Input
-            }] } });
-
-class ChartCollumnComponent {
-    constructor() {
-        // @Input() isHorizontal: boolean | string = false
-        this.isHorizontal = false;
-        this.isYLegend = false;
-        this.height = '266';
-        this.chart = ChartComponent;
-        // this.dataChart = dataChart;
-        // this.chartOptions = {
-        //   series: [
-        //     {
-        //       // name: "distibuted",
-        //       data: [21, 22, 10]
-        //     }
-        //     // {
-        //     //   name: "distibuted2",
-        //     //   data: [21, 22, 10, 28, 16, 21, 13, 30]
-        //     // }
-        //   ],
-        //   chart: {
-        //     height: 350,
-        //     type: "bar"
-        //     // events: {
-        //     //   click: function (chart, w, e) {
-        //     //     // console.log(chart, w, e)
-        //     //   }
-        //     // }
-        //   },
-        //   colors: [
-        //     "#0095D9",
-        //     "#5A892E",
-        //     "#CB22D7",
-        //     "#F64A00",
-        //     "#355C7D",
-        //     "#AE7B15",
-        //     "#33A49D",
-        //     "#6247DE"
-        //   ],
-        //   plotOptions: {
-        //     bar: {
-        //       columnWidth: "45%",
-        //       distributed: true,
-        //       // horizontal: Boolean(this.isHorizontal)
-        //       horizontal: this.isHorizontal
-        //     }
-        //   },
-        //   dataLabels: {
-        //     enabled: false
-        //   },
-        //   legend: {
-        //     show: false
-        //     // show: true
-        //   },
-        //   grid: {
-        //     show: false
-        //   },
-        //   yaxis: {
-        //     show: true
-        //   },
-        //   xaxis: {
-        //     // show: false,
-        //     categories: [
-        //       // "South Korea",
-        //       "Excelência operacional",
-        //       // ["John", "Doe"],
-        //       ["Joe", "Smith"],
-        //       ["Jake", "Williams"]
-        //     ],
-        //     labels: {
-        //       style: {
-        //         colors: [
-        //           "#008FFB",
-        //           "#00E396",
-        //           "#FEB019",
-        //           "#FF4560",
-        //           "#775DD0",
-        //           "#546E7A",
-        //           "#26a69a",
-        //           "#D10CE8"
-        //         ],
-        //         fontSize: "12px"
-        //       }
-        //     }
-        //   }
-        // };
-    }
-    ngOnInit() {
-        console.log(this.chartOptions);
-        console.log(this.isHorizontal);
-        this.chartOptions = {
-            series: [
-                {
-                    // name: "distibuted",
-                    // data: [21, 22, 10]
-                    data: this.data.map((item) => item.data)
-                }
-                // {
-                //   name: "distibuted2",
-                //   data: [21, 22, 10, 28, 16, 21, 13, 30]
-                // }
-            ],
-            chart: {
-                // height: '200',
-                height: this.height,
-                type: "bar"
-                // events: {
-                //   click: function (chart, w, e) {
-                //     // console.log(chart, w, e)
-                //   }
-                // }
-            },
-            // colors: [
-            //   "#0095D9",
-            //   "#5A892E",
-            //   "#CB22D7",
-            //   "#F64A00",
-            //   "#355C7D",
-            //   "#AE7B15",
-            //   "#33A49D",
-            //   "#6247DE"
-            // ],
-            colors: this.data.map((item) => item.color),
-            plotOptions: {
-                bar: {
-                    columnWidth: "45%",
-                    distributed: true,
-                    // horizontal: Boolean(this.isHorizontal)
-                    horizontal: this.isHorizontal
-                }
-            },
-            tooltip: {
-                custom: function ({ series, seriesIndex, dataPointIndex, w }) {
-                    console.log(series);
-                    console.log(seriesIndex);
-                    console.log(dataPointIndex);
-                    console.log(w);
-                    // return '<div class="arrow_box">' +
-                    //   '<p>' + w.config.xaxis.categories[dataPointIndex].join(' ') + '</p>' +
-                    //   '<span style="color: ${color};>' + w.config.colors + '</span>' +
-                    //   '<span>' + series[seriesIndex][dataPointIndex] + '</span>' +
-                    //   '</div>'
-                    return `<div class="chart-collumn__tooltip">
-            <p class="chart-collumn__tooltip__title">${w.config.xaxis.categories[dataPointIndex].join(' ')}</p>
-            <span class="chart-collumn__tooltip__bullet" style="color: ${w.config.colors[dataPointIndex]};"></span>
-            <span class="color: #B2B5BF;">Valor: </span> <span>${series[seriesIndex][dataPointIndex]}</span>
-            </div>`;
-                    // return `<lib-card></lib-card>`
-                }
-                // custon: CircleProgressComponent
-            },
-            dataLabels: {
-                enabled: false
-            },
-            legend: {
-                show: false
-                // show: true
-            },
-            grid: {
-                show: false
-            },
-            yaxis: {
-                show: this.isYLegend
-            },
-            xaxis: {
-                // show: false,
-                // categories: [
-                //   // "South Korea",
-                //   "Excelência operacional",
-                //   // ["John", "Doe"],
-                //   ["Joe", "Smith"],
-                //   ["Jake", "Williams"]
-                // ],
-                categories: this.data.map((item) => item.name.split(' ')),
-                labels: {
-                    style: {
-                        // colors: [
-                        //   "#008FFB",
-                        //   "#00E396",
-                        //   "#FEB019",
-                        //   "#FF4560",
-                        //   "#775DD0",
-                        //   "#546E7A",
-                        //   "#26a69a",
-                        //   "#D10CE8"
-                        // ],
-                        // colors: this.data.map((item: string | number | any) => item.color),
-                        fontSize: "12px"
-                    }
-                }
-            }
-        };
-        console.log(this.chartOptions);
-        console.log(this.isHorizontal);
-    }
-}
-ChartCollumnComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: ChartCollumnComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-ChartCollumnComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: ChartCollumnComponent, selector: "lib-chart-collumn", inputs: { isHorizontal: "isHorizontal", isYLegend: "isYLegend", height: "height", data: "data" }, viewQueries: [{ propertyName: "chart", first: true, predicate: ["chart"], descendants: true }], ngImport: i0, template: "<div id=\"chart\">\n  <apx-chart\n    [series]=\"chartOptions.series\"\n    [chart]=\"chartOptions.chart\"\n    [dataLabels]=\"chartOptions.dataLabels\"\n    [plotOptions]=\"chartOptions.plotOptions\"\n    [yaxis]=\"chartOptions.yaxis\"\n    [xaxis]=\"chartOptions.xaxis\"\n    [legend]=\"chartOptions.legend\"\n    [colors]=\"chartOptions.colors\"\n    [grid]=\"chartOptions.grid\"\n    [tooltip]=\"chartOptions.tooltip\" \n  ></apx-chart>\n</div>\n\n<div class=\"chart-collumn__tooltip\"></div>\n\n<lib-card></lib-card>\n", styles: [":host ::ng-deep .chart-collumn__tooltip{padding:8px}:host ::ng-deep .chart-collumn__tooltip__title{font-style:normal;font-weight:bold;font-size:16px;line-height:120%;color:#484a4d;margin:0 0 8px}:host ::ng-deep .chart-collumn__tooltip__bullet:before{content:\"\\2022\";font-weight:bold;margin-right:5px}\n"], components: [{ type: i1$1.ChartComponent, selector: "apx-chart", inputs: ["autoUpdateSeries", "chart", "annotations", "colors", "dataLabels", "series", "stroke", "labels", "legend", "markers", "noData", "fill", "tooltip", "plotOptions", "responsive", "xaxis", "yaxis", "grid", "states", "title", "subtitle", "theme"] }, { type: CardComponent, selector: "lib-card", inputs: ["className", "style"] }] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: ChartCollumnComponent, decorators: [{
-            type: Component,
-            args: [{
-                    selector: 'lib-chart-collumn',
-                    templateUrl: './chart-collumn.component.html',
-                    styleUrls: ['./chart-collumn.component.css']
-                }]
-        }], ctorParameters: function () { return []; }, propDecorators: { chart: [{
-                type: ViewChild,
-                args: ["chart"]
-            }], isHorizontal: [{
-                type: Input
-            }], isYLegend: [{
-                type: Input
-            }], height: [{
-                type: Input
-            }], data: [{
                 type: Input
             }] } });
 
@@ -705,8 +568,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
 
 class TableComponent {
     constructor() {
-        this.thead = [];
-        this.tbody = [];
+        // @Input() thead: object [] = []
+        // @Input() tbody: object [] = []
         this.className = '';
         this.style = {};
     }
@@ -714,7 +577,7 @@ class TableComponent {
     }
 }
 TableComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: TableComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-TableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: TableComponent, selector: "lib-table", inputs: { thead: "thead", tbody: "tbody", className: "className", style: "style" }, ngImport: i0, template: "<!-- <p>table works!</p>\n -->\n\n<table\n  [ngClass]=\"[\n  'table',\n  'table-responsive',\n  className\n  ]\"\n  [ngStyle]=\"style\"\n>\n  <thead>\n    <tr>\n      <!-- {thead.map((item, index) => <th key={index}>{item}</th> )} -->\n      <!-- <th key={index}>{item}</th> -->\n      <ng-content></ng-content>\n    </tr>\n  </thead>\n  <tbody>\n    <!-- {\n      tbody.map((item, index) =>\n        <tr key={index}>\n          {item.map((i, ind) => <td key={ind}>{i}</td> )}\n        </tr>\n      )} -->\n    <!-- <tr> -->\n       <ng-content select=\"[tbody]\"></ng-content>\n    <!-- </tr> -->\n  </tbody>\n</table>\n", styles: [":host ::ng-deep .table{max-width:100%;background-color:transparent;border-collapse:collapse;border-spacing:0;font-family:arial}:host ::ng-deep .table{width:100%}:host ::ng-deep .table th,:host ::ng-deep .table td{font-size:14px;padding:8px;line-height:20px;text-align:center;vertical-align:middle}:host ::ng-deep .table tbody tr:last-child>td{border-bottom:none}:host ::ng-deep .table tbody td{line-height:17px;border-bottom:#F0F1F2 solid 1px;padding-top:16px;padding-bottom:16px;color:#484a4d}:host ::ng-deep .table td:last-child{border-right:0}:host ::ng-deep .table thead th{color:#b2b5bf}:host ::ng-deep .table thead th *,:host ::ng-deep .table tbody td *{display:block}@media (max-width: 800px){:host ::ng-deep .table tbody td{border-bottom:none;border-right:#F0F1F2 solid 1px;padding:8px 15px}:host ::ng-deep .table td:last-child{border-right:#F0F1F2 solid 1px}:host ::ng-deep .table-responsive{display:block;position:relative;width:100%}:host ::ng-deep .table-responsive thead,:host ::ng-deep .table-responsive tbody,:host ::ng-deep .table-responsive th,:host ::ng-deep .table-responsive td,:host ::ng-deep .table-responsive tr{display:block}:host ::ng-deep .table-responsive td,:host ::ng-deep .table-responsive th{height:50px}:host ::ng-deep .table td{height:50}:host ::ng-deep .table-responsive thead{float:left}:host ::ng-deep .table-responsive tbody{width:auto;position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}:host ::ng-deep .table-responsive tbody tr{display:inline-block}}\n"], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgStyle, selector: "[ngStyle]", inputs: ["ngStyle"] }] });
+TableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: TableComponent, selector: "lib-table", inputs: { className: "className", style: "style" }, ngImport: i0, template: "<table\n  [ngClass]=\"[\n  'table',\n  'table-responsive',\n  className\n  ]\"\n  [ngStyle]=\"style\"\n>\n  <thead>\n    <tr>\n      <ng-content></ng-content>\n    </tr>\n  </thead>\n\n  <tbody>\n    <ng-content select=\"[tbody]\"></ng-content>\n  </tbody>\n</table>\n", styles: [":host ::ng-deep .table{max-width:100%;background-color:transparent;border-collapse:collapse;border-spacing:0;font-family:arial}:host ::ng-deep .table{width:100%}:host ::ng-deep .table th,:host ::ng-deep .table td{font-size:14px;padding:8px;line-height:20px;text-align:center;vertical-align:middle}:host ::ng-deep .table tbody tr:last-child>td{border-bottom:none}:host ::ng-deep .table tbody td{line-height:17px;border-bottom:#F0F1F2 solid 1px;padding-top:16px;padding-bottom:16px;color:#484a4d}:host ::ng-deep .table td:last-child{border-right:0}:host ::ng-deep .table thead th{color:#b2b5bf}:host ::ng-deep .table thead th *,:host ::ng-deep .table tbody td *{display:block}@media (max-width: 800px){:host ::ng-deep .table tbody td{border-bottom:none;border-right:#F0F1F2 solid 1px;padding:8px 15px}:host ::ng-deep .table td:last-child{border-right:#F0F1F2 solid 1px}:host ::ng-deep .table-responsive{display:block;position:relative;width:100%}:host ::ng-deep .table-responsive thead,:host ::ng-deep .table-responsive tbody,:host ::ng-deep .table-responsive th,:host ::ng-deep .table-responsive td,:host ::ng-deep .table-responsive tr{display:block}:host ::ng-deep .table-responsive td,:host ::ng-deep .table-responsive th{height:50px}:host ::ng-deep .table td{height:50}:host ::ng-deep .table-responsive thead{float:left}:host ::ng-deep .table-responsive tbody{width:auto;position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}:host ::ng-deep .table-responsive tbody tr{display:inline-block}}\n"], directives: [{ type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { type: i1.NgStyle, selector: "[ngStyle]", inputs: ["ngStyle"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: TableComponent, decorators: [{
             type: Component,
             args: [{
@@ -722,11 +585,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
                     templateUrl: './table.component.html',
                     styleUrls: ['./table.component.css']
                 }]
-        }], ctorParameters: function () { return []; }, propDecorators: { thead: [{
-                type: Input
-            }], tbody: [{
-                type: Input
-            }], className: [{
+        }], ctorParameters: function () { return []; }, propDecorators: { className: [{
                 type: Input
             }], style: [{
                 type: Input
