@@ -22,4 +22,10 @@ describe('CircleProgressComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should validate subtitleFormat function', () => {
+    const value = component.subtitleFormat(10);
+
+    expect(value).toBe('10%');
+  });
 });

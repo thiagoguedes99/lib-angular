@@ -1,44 +1,24 @@
-<!-- <p>circle-progress works!</p>
-
 <circle-progress
-  [percent]="85"
-  [radius]="100"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'#78C000'"
-  [innerStrokeColor]="'#C7E596'"
+  [percent]='percent'
+  [radius]="60"
+  [outerStrokeWidth]="10"
+  [innerStrokeWidth]="20"
+  [space]="-20"
+  [outerStrokeColor]="'#4882c2'"
+  [innerStrokeColor]="'#e7e8ea'"
+  [showBackground]="false"
+  [title]="subtitleFormat(percent)"
+  [animateTitle]="true"
   [animation]="true"
-  [animationDuration]="300"
-></circle-progress> -->
-
-<!-- <circle-progress
-  name="E"
-  [options]="optionsE"
-  [renderOnClick]="false"
-  class="copy"
-  ></circle-progress> -->
-
-  <circle-progress
-    [percent]='percent'
-    [radius]="60"
-    [outerStrokeWidth]="10"
-    [innerStrokeWidth]="20"
-    [space]="-20"
-    [outerStrokeColor]="'#4882c2'"
-    [innerStrokeColor]="'#e7e8ea'"
-    [showBackground]="false"
-    [title]="subtitleFormat(percent)"
-    [animateTitle]="true"
-    [animation]="true"
-    [showSubtitle]="false"
-    [showUnits]="false"
-    [clockwise]="false"
-    [animationDuration]="1000"
-    [startFromZero]="false"
-    [outerStrokeGradient]="true"
-    [outerStrokeGradientStopColor]="'#53a9ff'"
-    [lazy]="false"
-    [outerStrokeWidth]="20"
-    [outerStrokeLinecap]="'butt'"
-    [responsive]="true"
-  ></circle-progress>
+  [showSubtitle]="false"
+  [showUnits]="false"
+  [clockwise]="false"
+  [animationDuration]="1000"
+  [startFromZero]="false"
+  [outerStrokeGradient]="true"
+  [outerStrokeGradientStopColor]="'#53a9ff'"
+  [lazy]="false"
+  [outerStrokeWidth]="20"
+  [outerStrokeLinecap]="'butt'"
+  [responsive]="true"
+></circle-progress>

@@ -7,29 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CircleProgressComponent implements OnInit {
 
-  // optionsE = {
-  //   percent: 75,
-  //   radius: 60,
-  //   outerStrokeWidth: 10,
-  //   innerStrokeWidth: 10,
-  //   space: -10,
-  //   outerStrokeColor: "#4882c2",
-  //   innerStrokeColor: "#e7e8ea",
-  //   showBackground: false,
-  //   title: 'UI',
-  //   animateTitle: false,
-  //   showUnits: false,
-  //   clockwise: false,
-  //   animationDuration: 1000,
-  //   startFromZero: false,
-  //   outerStrokeGradient: true,
-  //   outerStrokeGradientStopColor: '#53a9ff',
-  //   lazy: true,
-  //   subtitleFormat: (percent: number): string => {
-  //     return `${percent}%`;
-  //   }
-  // }
-
   @Input() percent: number = 0;
 
   constructor() { }
