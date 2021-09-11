@@ -20,12 +20,13 @@ export declare class ChartLineComponent implements OnInit {
     chart: any;
     chartOptions: Partial<ChartOptions> | any;
     height: string | number;
+    title: string;
     data: dataChart | any;
     monthNames: string[];
     constructor();
     ngOnInit(): void;
     CustomToolTip({ series, seriesIndex, dataPointIndex, w }: any, monthNames: string[]): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChartLineComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChartLineComponent, "lib-chart-line", never, { "height": "height"; "data": "data"; }, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChartLineComponent, "lib-chart-line", never, { "height": "height"; "title": "title"; "data": "data"; }, {}, never, never>;
 }
 export {};

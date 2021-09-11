@@ -40,6 +40,7 @@ export class ChartLineComponent implements OnInit {
   chartOptions: Partial<ChartOptions> | any;
 
   @Input() height: string | number = '266'
+  @Input() title: string = ''
   @Input() data: dataChart | any
 
   monthNames: string[] = [
@@ -79,7 +80,7 @@ export class ChartLineComponent implements OnInit {
         curve: "straight"
       },
       title: {
-        text: "Product Trends by Month",
+        text: this.title,
         align: "left"
       },
       tooltip: {
