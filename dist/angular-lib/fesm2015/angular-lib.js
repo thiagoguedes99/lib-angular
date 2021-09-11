@@ -187,7 +187,7 @@ class ChartCollumnComponent {
     }
 }
 ChartCollumnComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: ChartCollumnComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-ChartCollumnComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: ChartCollumnComponent, selector: "lib-chart-collumn", inputs: { isHorizontal: "isHorizontal", isYLegend: "isYLegend", height: "height", data: "data" }, viewQueries: [{ propertyName: "chart", first: true, predicate: ["chart"], descendants: true }], ngImport: i0, template: "<div id=\"chart\">\n  <apx-chart\n    [series]=\"chartOptions.series\"\n    [chart]=\"chartOptions.chart\"\n    [dataLabels]=\"chartOptions.dataLabels\"\n    [plotOptions]=\"chartOptions.plotOptions\"\n    [yaxis]=\"chartOptions.yaxis\"\n    [xaxis]=\"chartOptions.xaxis\"\n    [legend]=\"chartOptions.legend\"\n    [colors]=\"chartOptions.colors\"\n    [grid]=\"chartOptions.grid\"\n    [tooltip]=\"chartOptions.tooltip\" \n  ></apx-chart>\n</div>\n\n<!-- <div class=\"chart-collumn__tooltip\"></div>\n\n<lib-card></lib-card> -->\n", styles: [":host ::ng-deep .chart-collumn__tooltip{padding:8px}:host ::ng-deep .chart-collumn__tooltip__title{font-style:normal;font-weight:bold;font-size:16px;line-height:120%;color:#484a4d;margin:0 0 8px}:host ::ng-deep .chart-collumn__tooltip__bullet:before{content:\"\\2022\";font-weight:bold;margin-right:5px}\n"], components: [{ type: i1$1.ChartComponent, selector: "apx-chart", inputs: ["autoUpdateSeries", "chart", "annotations", "colors", "dataLabels", "series", "stroke", "labels", "legend", "markers", "noData", "fill", "tooltip", "plotOptions", "responsive", "xaxis", "yaxis", "grid", "states", "title", "subtitle", "theme"] }] });
+ChartCollumnComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: ChartCollumnComponent, selector: "lib-chart-collumn", inputs: { isHorizontal: "isHorizontal", isYLegend: "isYLegend", height: "height", data: "data" }, viewQueries: [{ propertyName: "chart", first: true, predicate: ["chart"], descendants: true }], ngImport: i0, template: "<div id=\"chart\">\n  <apx-chart\n    [series]=\"chartOptions.series\"\n    [chart]=\"chartOptions.chart\"\n    [dataLabels]=\"chartOptions.dataLabels\"\n    [plotOptions]=\"chartOptions.plotOptions\"\n    [yaxis]=\"chartOptions.yaxis\"\n    [xaxis]=\"chartOptions.xaxis\"\n    [legend]=\"chartOptions.legend\"\n    [colors]=\"chartOptions.colors\"\n    [grid]=\"chartOptions.grid\"\n    [tooltip]=\"chartOptions.tooltip\"\n  ></apx-chart>\n</div>\n\n<!-- <div class=\"chart-collumn__tooltip\"></div>\n\n<lib-card></lib-card> -->\n", styles: [":host ::ng-deep .chart-collumn__tooltip{padding:8px}:host ::ng-deep .chart-collumn__tooltip__title{font-style:normal;font-weight:bold;font-size:16px;line-height:120%;color:#484a4d;margin:0 0 8px}:host ::ng-deep .chart-collumn__tooltip__bullet:before{content:\"\\2022\";font-weight:bold;margin-right:5px}\n"], components: [{ type: i1$1.ChartComponent, selector: "apx-chart", inputs: ["autoUpdateSeries", "chart", "annotations", "colors", "dataLabels", "series", "stroke", "labels", "legend", "markers", "noData", "fill", "tooltip", "plotOptions", "responsive", "xaxis", "yaxis", "grid", "states", "title", "subtitle", "theme"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: ChartCollumnComponent, decorators: [{
             type: Component,
             args: [{
@@ -589,6 +589,81 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
                 type: Input
             }] } });
 
+class ChartLineComponent {
+    constructor() {
+        this.height = '266';
+        this.monthNames = [
+            'janeiro',
+            'fevereiro',
+            'março',
+            'abril',
+            'maio',
+            'junho',
+            'julho',
+            'agosto',
+            'setembro',
+            'outubro',
+            'novembro',
+            'dezembro',
+        ];
+        this.chart = ChartComponent;
+    }
+    ngOnInit() {
+        this.chartOptions = {
+            series: [
+                {
+                    data: this.data.map((item) => item.data)
+                }
+            ],
+            chart: {
+                height: this.height,
+                type: "line",
+                zoom: {
+                    enabled: false
+                }
+            },
+            stroke: {
+                curve: "straight"
+            },
+            title: {
+                text: "Product Trends by Month",
+                align: "left"
+            },
+            tooltip: {
+                custom: (e) => this.CustomToolTip(e, this.monthNames)
+            },
+            xaxis: {
+                type: "datetime",
+                categories: this.data.map((item) => new Date(item.date.replace('-', '/')).getTime()),
+            }
+        };
+    }
+    CustomToolTip({ series, seriesIndex, dataPointIndex, w }, monthNames) {
+        const date = new Date(w.config.xaxis.categories[dataPointIndex]);
+        return `<div class="chart-line__tooltip">
+      <p class="chart-line__tooltip__title">${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}</p>
+      <span class="color: #B2B5BF;">Valor: </span> <span>${series[seriesIndex][dataPointIndex]}</span>
+      </div>`;
+    }
+}
+ChartLineComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: ChartLineComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ChartLineComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: ChartLineComponent, selector: "lib-chart-line", inputs: { height: "height", data: "data" }, viewQueries: [{ propertyName: "chart", first: true, predicate: ["chart"], descendants: true }], ngImport: i0, template: "<div id=\"chart\">\n  <apx-chart\n    [series]=\"chartOptions.series\"\n    [chart]=\"chartOptions.chart\"\n    [xaxis]=\"chartOptions.xaxis\"\n    [dataLabels]=\"chartOptions.dataLabels\"\n    [grid]=\"chartOptions.grid\"\n    [stroke]=\"chartOptions.stroke\"\n    [title]=\"chartOptions.title\"\n    [tooltip]=\"chartOptions.tooltip\"\n  ></apx-chart>\n</div>", styles: [":host ::ng-deep .chart-line__tooltip{padding:8px}:host ::ng-deep .chart-line__tooltip__title{font-style:normal;font-weight:bold;font-size:16px;line-height:120%;color:#484a4d;margin:0 0 8px}\n"], components: [{ type: i1$1.ChartComponent, selector: "apx-chart", inputs: ["autoUpdateSeries", "chart", "annotations", "colors", "dataLabels", "series", "stroke", "labels", "legend", "markers", "noData", "fill", "tooltip", "plotOptions", "responsive", "xaxis", "yaxis", "grid", "states", "title", "subtitle", "theme"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: ChartLineComponent, decorators: [{
+            type: Component,
+            args: [{
+                    selector: 'lib-chart-line',
+                    templateUrl: './chart-line.component.html',
+                    styleUrls: ['./chart-line.component.css']
+                }]
+        }], ctorParameters: function () { return []; }, propDecorators: { chart: [{
+                type: ViewChild,
+                args: ["chart"]
+            }], height: [{
+                type: Input
+            }], data: [{
+                type: Input
+            }] } });
+
 class AngularLibModule {
 }
 AngularLibModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: AngularLibModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
@@ -601,7 +676,8 @@ AngularLibModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", versio
         TextComponent,
         PointerInfoComponent,
         TagComponent,
-        TableComponent], imports: [CommonModule,
+        TableComponent,
+        ChartLineComponent], imports: [CommonModule,
         NgApexchartsModule], exports: [AngularLibComponent,
         ContainerComponent,
         ColComponent,
@@ -612,7 +688,8 @@ AngularLibModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", versio
         IconModule,
         PointerInfoComponent,
         TagComponent,
-        TableComponent] });
+        TableComponent,
+        ChartLineComponent] });
 AngularLibModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: AngularLibModule, imports: [[
             CommonModule,
             NgApexchartsModule,
@@ -631,6 +708,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
                         PointerInfoComponent,
                         TagComponent,
                         TableComponent,
+                        ChartLineComponent,
                     ],
                     imports: [
                         CommonModule,
@@ -647,7 +725,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
                         IconModule,
                         PointerInfoComponent,
                         TagComponent,
-                        TableComponent
+                        TableComponent,
+                        ChartLineComponent
                     ]
                 }]
         }] });
@@ -775,5 +854,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { AlertComponent, AngularLibComponent, AngularLibModule, CardComponent, ChartCollumnComponent, CircleProgressComponent, CircleProgressModule, ColComponent, ContainerComponent, FormatService, IconComponent, IconModule, PointerInfoComponent, TableComponent, TagComponent, TextComponent };
+export { AlertComponent, AngularLibComponent, AngularLibModule, CardComponent, ChartCollumnComponent, ChartLineComponent, CircleProgressComponent, CircleProgressModule, ColComponent, ContainerComponent, FormatService, IconComponent, IconModule, PointerInfoComponent, TableComponent, TagComponent, TextComponent };
 //# sourceMappingURL=angular-lib.js.map

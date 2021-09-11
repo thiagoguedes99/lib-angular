@@ -47,6 +47,28 @@ export class AppComponent {
 
   myStyle = { display: 'flex' }
 
+  dataChartLine = [
+    {
+      date: '2019-01-01',
+      data: 10
+    },
+    {
+      date: '2020-03-05',
+      data: 90
+    },
+    {
+      date: '2020-06-09',
+      data: 30
+    },
+    {
+      date: '2020-08-15',
+      data: 70
+    },
+    {
+      date: '2021-10-20',
+      data: 50
+    },
+  ]
 
   constructor(private formatService: FormatService) { }
 

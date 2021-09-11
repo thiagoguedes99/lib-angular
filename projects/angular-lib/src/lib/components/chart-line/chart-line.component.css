@@ -1,0 +1,12 @@
+:host ::ng-deep .chart-line__tooltip {
+  padding: 8px;
+}
+
+:host ::ng-deep .chart-line__tooltip__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 120%;
+  color: #484A4D;
+  margin: 0px 0px 8px 0px;
+}

@@ -21,6 +21,7 @@ export * from './lib/components/text/text.component';
 export * from './lib/components/pointer-info/pointer-info.component';
 export * from './lib/components/table/table.component';
 export * from './lib/components/tag/tag.component';
+export * from './lib/components/chart-line/chart-line.component';
 
 export * from './lib/fuctions/format.service';
 // export * from './lib/fuctions/fuctions.module';

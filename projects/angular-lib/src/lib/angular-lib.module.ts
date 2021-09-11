@@ -15,6 +15,7 @@ import { IconModule } from './components/icon/icon.module';
 import { PointerInfoComponent } from './components/pointer-info/pointer-info.component';
 import { TagComponent } from './components/tag/tag.component';
 import { TableComponent } from './components/table/table.component';
+import { ChartLineComponent } from './components/chart-line/chart-line.component';
 
 
 
@@ -30,6 +31,7 @@ import { TableComponent } from './components/table/table.component';
     PointerInfoComponent,
     TagComponent,
     TableComponent,
+    ChartLineComponent,
   ],
   imports: [
     CommonModule,
@@ -46,7 +48,8 @@ import { TableComponent } from './components/table/table.component';
     IconModule,
     PointerInfoComponent,
     TagComponent,
-    TableComponent
+    TableComponent,
+    ChartLineComponent
   ]
 })
 

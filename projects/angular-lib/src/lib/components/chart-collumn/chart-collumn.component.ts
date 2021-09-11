@@ -22,7 +22,7 @@ type ApexXAxis = {
   };
 };
 
-export type ChartOptions = {
+type ChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
   dataLabels: ApexDataLabels;
@@ -35,7 +35,7 @@ export type ChartOptions = {
   tooltip: any;
 };
 
-export type dataChart = {
+type dataChart = {
   name?: string,
   data: string | number,
   color: string,

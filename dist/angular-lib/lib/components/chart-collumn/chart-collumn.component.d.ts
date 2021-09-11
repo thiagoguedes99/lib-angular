@@ -11,7 +11,7 @@ declare type ApexXAxis = {
         };
     };
 };
-export declare type ChartOptions = {
+declare type ChartOptions = {
     series: ApexAxisChartSeries;
     chart: ApexChart;
     dataLabels: ApexDataLabels;
@@ -23,7 +23,7 @@ export declare type ChartOptions = {
     legend: ApexLegend;
     tooltip: any;
 };
-export declare type dataChart = {
+declare type dataChart = {
     name?: string;
     data: string | number;
     color: string;
