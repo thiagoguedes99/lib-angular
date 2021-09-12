@@ -19,11 +19,12 @@ declare type dataChart = {
 export declare class ChartDonutComponent implements OnInit {
     chart: any;
     chartOptions: Partial<ChartOptions> | any;
+    height: string | number;
     data: dataChart | any;
     totalData: string | number;
     constructor();
     ngOnInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChartDonutComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChartDonutComponent, "lib-chart-donut", never, { "data": "data"; }, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChartDonutComponent, "lib-chart-donut", never, { "height": "height"; "data": "data"; }, {}, never, never>;
 }
 export {};

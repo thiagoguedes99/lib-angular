@@ -647,6 +647,7 @@
 
   var ChartDonutComponent = /** @class */ (function () {
       function ChartDonutComponent() {
+          this.height = '266';
           this.data = [];
           this.totalData = 0;
           this.chart = i1$1.ChartComponent;
@@ -658,7 +659,8 @@
           this.chartOptions = {
               series: this.data.map(function (item) { return Number(item.data); }),
               chart: {
-                  width: 380,
+                  // width: 380,
+                  width: this.height,
                   type: "donut"
               },
               labels: this.data.map(function (item) { return item.name; }),
@@ -673,7 +675,7 @@
                       breakpoint: 480,
                       options: {
                           chart: {
-                              width: 200
+                              width: this.height
                           },
                       }
                   }
@@ -683,7 +685,7 @@
       return ChartDonutComponent;
   }());
   ChartDonutComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: ChartDonutComponent, deps: [], target: i0__namespace.ɵɵFactoryTarget.Component });
-  ChartDonutComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: ChartDonutComponent, selector: "lib-chart-donut", inputs: { data: "data" }, viewQueries: [{ propertyName: "chart", first: true, predicate: ["chart"], descendants: true }], ngImport: i0__namespace, template: "<div id=\"chart\" class=\"chart-donut__container\">\n\n  <p class=\"chart-donut__total\">\n    <span>{{ totalData }}</span>\n    <span class=\"chart-donut__total__text\">Hist\u00F3rias</span>\n  </p>\n\n  <apx-chart\n    [series]=\"chartOptions.series\"\n    [chart]=\"chartOptions.chart\"\n    [labels]=\"chartOptions.labels\"\n    [fill]=\"chartOptions.fill\"\n    [dataLabels]=\"chartOptions.dataLabels\"\n    [responsive]=\"chartOptions.responsive\"\n  ></apx-chart>\n</div>\n", styles: [":host ::ng-deep .apexcharts-legend{display:none}.chart-donut__container{position:relative;display:inline-flex}.chart-donut__total{position:absolute;display:inline-flex;flex-direction:column;align-items:center;transform:translate(-58%,-100%);top:50%;left:50%}.chart-donut__total__text{font-family:Roboto;font-style:normal;font-weight:normal;font-size:14px;line-height:20px;color:#89837f}\n"], components: [{ type: i1__namespace$1.ChartComponent, selector: "apx-chart", inputs: ["autoUpdateSeries", "chart", "annotations", "colors", "dataLabels", "series", "stroke", "labels", "legend", "markers", "noData", "fill", "tooltip", "plotOptions", "responsive", "xaxis", "yaxis", "grid", "states", "title", "subtitle", "theme"] }] });
+  ChartDonutComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: ChartDonutComponent, selector: "lib-chart-donut", inputs: { height: "height", data: "data" }, viewQueries: [{ propertyName: "chart", first: true, predicate: ["chart"], descendants: true }], ngImport: i0__namespace, template: "<div id=\"chart\" class=\"chart-donut__container\">\n\n  <p class=\"chart-donut__total\">\n    <span>{{ totalData }}</span>\n    <span class=\"chart-donut__total__text\">Hist\u00F3rias</span>\n  </p>\n\n  <apx-chart\n    [series]=\"chartOptions.series\"\n    [chart]=\"chartOptions.chart\"\n    [labels]=\"chartOptions.labels\"\n    [fill]=\"chartOptions.fill\"\n    [dataLabels]=\"chartOptions.dataLabels\"\n    [responsive]=\"chartOptions.responsive\"\n  ></apx-chart>\n</div>\n", styles: [":host ::ng-deep .apexcharts-legend{display:none}.chart-donut__container{position:relative;display:inline-flex}.chart-donut__total{position:absolute;display:inline-flex;flex-direction:column;align-items:center;transform:translate(-58%,-100%);top:50%;left:50%}.chart-donut__total__text{font-family:Roboto;font-style:normal;font-weight:normal;font-size:14px;line-height:20px;color:#89837f}\n"], components: [{ type: i1__namespace$1.ChartComponent, selector: "apx-chart", inputs: ["autoUpdateSeries", "chart", "annotations", "colors", "dataLabels", "series", "stroke", "labels", "legend", "markers", "noData", "fill", "tooltip", "plotOptions", "responsive", "xaxis", "yaxis", "grid", "states", "title", "subtitle", "theme"] }] });
   i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: ChartDonutComponent, decorators: [{
               type: i0.Component,
               args: [{
@@ -694,6 +696,8 @@
           }], ctorParameters: function () { return []; }, propDecorators: { chart: [{
                   type: i0.ViewChild,
                   args: ["chart"]
+              }], height: [{
+                  type: i0.Input
               }], data: [{
                   type: i0.Input
               }] } });
