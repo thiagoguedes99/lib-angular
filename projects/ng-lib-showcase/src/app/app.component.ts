@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { FormatService } from '../../../angular-lib/src/public-api';
+import { FuctionsService } from '../../../angular-lib/src/public-api';
 
 type dataChart = {
   name?: string,
@@ -70,11 +70,11 @@ export class AppComponent {
     },
   ]
 
-  constructor(private formatService: FormatService) { }
+  constructor(private fuctionsService: FuctionsService) { }
 
   ngOnInit(): void {
-    console.log(this.formatService.date('2020-08-17'))
-    console.log(this.formatService.fullDate('2020-08-17'))
+    console.log(this.fuctionsService.date('2020-08-17'))
+    console.log(this.fuctionsService.fullDate('2020-08-17'))
 
     this.dataChart = [
       {

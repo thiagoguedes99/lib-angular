@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // import myDate from './date';
-import { FormatService } from './format.service';
+import { FuctionsService } from './fuctions.service';
 
 
 
@@ -13,7 +13,7 @@ import { FormatService } from './format.service';
   ],
   // providers: [FormatService],
   exports: [
-    FormatService
+    FuctionsService
   ]
 })
 export class FuctionsModule { }

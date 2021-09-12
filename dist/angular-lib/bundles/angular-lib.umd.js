@@ -875,23 +875,33 @@
       return simpleDate[0] + " de " + monthNames[simpleDate[1]] + " de " + simpleDate[2];
   };
 
-  var FormatService = /** @class */ (function () {
-      function FormatService() {
+  var isMobile = function (media) {
+      if (media === void 0) { media = 'max-width: 960px'; }
+      return window.matchMedia("(" + media + ")").matches;
+  };
+
+  var FuctionsService = /** @class */ (function () {
+      function FuctionsService() {
       }
-      FormatService.prototype.date = function (date) {
+      FuctionsService.prototype.date = function (date) {
           if (date === void 0) { date = ''; }
           return myDate(date);
       };
       /** Recebe a data em formato americano e devolte a data em formato brasileiro com descrição do mês */
-      FormatService.prototype.fullDate = function (date) {
+      FuctionsService.prototype.fullDate = function (date) {
           if (date === void 0) { date = ''; }
           return fullDate(date);
       };
-      return FormatService;
+      /** Valida se o device tem um tela tamanho mobile, tamanho default 960px de largura */
+      FuctionsService.prototype.isMobile = function (date) {
+          if (date === void 0) { date = ''; }
+          return isMobile(date);
+      };
+      return FuctionsService;
   }());
-  FormatService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: FormatService, deps: [], target: i0__namespace.ɵɵFactoryTarget.Injectable });
-  FormatService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: FormatService, providedIn: 'root' });
-  i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: FormatService, decorators: [{
+  FuctionsService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: FuctionsService, deps: [], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+  FuctionsService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: FuctionsService, providedIn: 'root' });
+  i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: FuctionsService, decorators: [{
               type: i0.Injectable,
               args: [{
                       providedIn: 'root'
@@ -919,7 +929,7 @@
   exports.CircleProgressModule = CircleProgressModule;
   exports.ColComponent = ColComponent;
   exports.ContainerComponent = ContainerComponent;
-  exports.FormatService = FormatService;
+  exports.FuctionsService = FuctionsService;
   exports.IconComponent = IconComponent;
   exports.IconModule = IconModule;
   exports.PointerInfoComponent = PointerInfoComponent;

@@ -3,11 +3,12 @@ import { Injectable } from '@angular/core';
 // import { myDate } from './date';
 import myDate from './date';
 import fullDate from './full-date';
+import isMobile from './is-mobile';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FormatService {
+export class FuctionsService {
 
   constructor() { }
 
@@ -19,6 +20,11 @@ export class FormatService {
   fullDate(date: string = '') {
     return fullDate(date)
   }
-  
+
+  /** Valida se o device tem um tela tamanho mobile, tamanho default 960px de largura */
+  isMobile(date: string = '') {
+    return isMobile(date)
+  }
+
 
 }

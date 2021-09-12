@@ -24,7 +24,7 @@ export * from './lib/components/tag/tag.component';
 export * from './lib/components/chart-line/chart-line.component';
 export * from './lib/components/chart-donut/chart-donut.component';
 
-export * from './lib/fuctions/format.service';
+export * from './lib/fuctions/fuctions.service';
 // export * from './lib/fuctions/fuctions.module';
 
 // export * from './lib/fuctions/date';

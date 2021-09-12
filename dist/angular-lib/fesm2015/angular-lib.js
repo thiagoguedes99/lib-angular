@@ -888,7 +888,9 @@ const fullDate = (value) => {
     return `${simpleDate[0]} de ${monthNames[simpleDate[1]]} de ${simpleDate[2]}`;
 };
 
-class FormatService {
+const isMobile = (media = 'max-width: 960px') => window.matchMedia(`(${media})`).matches;
+
+class FuctionsService {
     constructor() { }
     date(date = '') {
         return myDate(date);
@@ -897,10 +899,14 @@ class FormatService {
     fullDate(date = '') {
         return fullDate(date);
     }
+    /** Valida se o device tem um tela tamanho mobile, tamanho default 960px de largura */
+    isMobile(date = '') {
+        return isMobile(date);
+    }
 }
-FormatService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: FormatService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
-FormatService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: FormatService, providedIn: 'root' });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: FormatService, decorators: [{
+FuctionsService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: FuctionsService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
+FuctionsService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: FuctionsService, providedIn: 'root' });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: FuctionsService, decorators: [{
             type: Injectable,
             args: [{
                     providedIn: 'root'
@@ -917,5 +923,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.3", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { AlertComponent, AngularLibComponent, AngularLibModule, CardComponent, ChartCollumnComponent, ChartDonutComponent, ChartLineComponent, CircleProgressComponent, CircleProgressModule, ColComponent, ContainerComponent, FormatService, IconComponent, IconModule, PointerInfoComponent, TableComponent, TagComponent, TextComponent };
+export { AlertComponent, AngularLibComponent, AngularLibModule, CardComponent, ChartCollumnComponent, ChartDonutComponent, ChartLineComponent, CircleProgressComponent, CircleProgressModule, ColComponent, ContainerComponent, FuctionsService, IconComponent, IconModule, PointerInfoComponent, TableComponent, TagComponent, TextComponent };
 //# sourceMappingURL=angular-lib.js.map
