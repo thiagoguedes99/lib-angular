@@ -36,6 +36,7 @@ export class ChartDonutComponent implements OnInit {
   @ViewChild("chart") chart: any;
   chartOptions: Partial<ChartOptions> | any;
 
+  @Input() height: string | number = '266'
   @Input() data: dataChart | any = [];
 
   totalData: string | number = 0;
@@ -52,7 +53,8 @@ export class ChartDonutComponent implements OnInit {
     this.chartOptions = {
       series: this.data.map((item: string | number | any) => Number(item.data)),
       chart: {
-        width: 380,
+        // width: 380,
+        width: this.height,
         type: "donut"
       },
       labels: this.data.map((item: string | number | any) => item.name),
@@ -68,7 +70,7 @@ export class ChartDonutComponent implements OnInit {
           breakpoint: 480,
           options: {
             chart: {
-              width: 200
+              width: this.height
             },
           }
         }
