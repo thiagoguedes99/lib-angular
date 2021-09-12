@@ -73,9 +73,6 @@ export class AppComponent {
   constructor(private fuctionsService: FuctionsService) { }
 
   ngOnInit(): void {
-    console.log(this.fuctionsService.date('2020-08-17'))
-    console.log(this.fuctionsService.fullDate('2020-08-17'))
-
     this.dataChart = [
       {
         name: 'teste1 test',

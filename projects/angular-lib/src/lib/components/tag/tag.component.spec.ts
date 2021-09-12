@@ -27,7 +27,6 @@ describe('TagComponent', () => {
   it('should validate if the firt tag is span', () => {
     const contentComponent: HTMLElement = fixture.nativeElement;
 
-    console.log(contentComponent.children[0].nodeName)
     expect(contentComponent.children[0].nodeName).toBe('SPAN');
   });
 
@@ -65,9 +64,7 @@ describe('TagComponent', () => {
 
       const contentComponent: HTMLElement = fixture.nativeElement;
 
-      console.log(contentComponent.children[0].innerHTML)
       expect(contentComponent.children[0].innerHTML.trim()).toBe('text test');
-      // expect(contentComponent.children[0].textContent?.trim()).toBe('text test');
     })
 
   });

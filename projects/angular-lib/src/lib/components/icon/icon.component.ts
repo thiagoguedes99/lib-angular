@@ -13,10 +13,6 @@ export class IconComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log('ngOnInit Icon inicio')
-    console.log(this.name)
-    console.log('ngOnInit Icon final')
-  }
+  ngOnInit(): void { }
 
 }

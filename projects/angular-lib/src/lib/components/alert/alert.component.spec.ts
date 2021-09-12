@@ -28,7 +28,6 @@ describe('AlertComponent', () => {
   it('should validate if the firt tag is div', () => {
     const contentComponent: HTMLElement = fixture.nativeElement;
 
-    console.log(contentComponent.children[0].nodeName)
     expect(contentComponent.children[0].nodeName).toBe('DIV');
   });
 

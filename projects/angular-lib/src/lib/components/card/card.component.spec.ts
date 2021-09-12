@@ -25,20 +25,8 @@ describe('CardComponent', () => {
   });
 
   it('should has the css class of component', () => {
-    // const article: HTMLElement = fixture.nativeElement.querySelector('article');
     const contentComponent: HTMLElement = fixture.nativeElement;
 
-    // const listNames = fixture.debugElement.queryAll(By.css('#people-list li'));
-    // const listNames = fixture.debugElement.queryAll();
-    // expect(listNames[0].nativeElement.textContent.trim()).toEqual('Luke Skywalker');
-    
-    // listNames[0].nativeElement
-    
-    // console.log('listNames')
-    // console.log(contentComponent)
-    // console.log(contentComponent.children[0].className)
-    // console.log(listNames)
-    // console.log(listNames[0].nativeElement)
     expect(contentComponent.children[0].className).toBe('card__container');
   });
 
@@ -69,8 +57,6 @@ describe('CardComponent', () => {
       fixture.detectChanges();
 
       const contentComponent: HTMLElement = fixture.nativeElement;
-
-      // console.log(contentComponent.children[0].getAttribute('style'))
 
       expect(contentComponent.children[0].getAttribute('style')).toBe('color: red;');
     })

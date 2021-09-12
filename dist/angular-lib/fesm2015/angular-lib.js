@@ -458,11 +458,7 @@ class IconComponent {
         this.name = '';
         this.style = {};
     }
-    ngOnInit() {
-        console.log('ngOnInit Icon inicio');
-        console.log(this.name);
-        console.log('ngOnInit Icon final');
-    }
+    ngOnInit() { }
 }
 IconComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0, type: IconComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
 IconComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.3", type: IconComponent, selector: "lib-icon", inputs: { name: "name", style: "style" }, ngImport: i0, template: "<lib-person [style]=\"style\" *ngIf=\"name === 'person'\"></lib-person>\n\n<lib-refresh [style]=\"style\" *ngIf=\"name === 'refresh'\"></lib-refresh>\n\n<lib-cart [style]=\"style\" *ngIf=\"name === 'cart'\"></lib-cart>\n\n<lib-verification [style]=\"style\" *ngIf=\"name === 'verification'\"></lib-verification>\n\n<lib-atention [style]=\"style\" *ngIf=\"name === 'atention'\"></lib-atention>", styles: [""], components: [{ type: PersonComponent, selector: "lib-person", inputs: ["style"] }, { type: RefreshComponent, selector: "lib-refresh" }, { type: CartComponent, selector: "lib-cart" }, { type: VerificationComponent, selector: "lib-verification" }, { type: AtentionComponent, selector: "lib-atention", inputs: ["style"] }], directives: [{ type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] });

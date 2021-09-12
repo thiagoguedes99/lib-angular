@@ -429,11 +429,7 @@
           this.name = '';
           this.style = {};
       }
-      IconComponent.prototype.ngOnInit = function () {
-          console.log('ngOnInit Icon inicio');
-          console.log(this.name);
-          console.log('ngOnInit Icon final');
-      };
+      IconComponent.prototype.ngOnInit = function () { };
       return IconComponent;
   }());
   IconComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.3", ngImport: i0__namespace, type: IconComponent, deps: [], target: i0__namespace.ɵɵFactoryTarget.Component });
