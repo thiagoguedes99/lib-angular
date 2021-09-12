@@ -16,6 +16,7 @@ import { PointerInfoComponent } from './components/pointer-info/pointer-info.com
 import { TagComponent } from './components/tag/tag.component';
 import { TableComponent } from './components/table/table.component';
 import { ChartLineComponent } from './components/chart-line/chart-line.component';
+import { ChartDonutComponent } from './components/chart-donut/chart-donut.component';
 
 
 
@@ -32,6 +33,7 @@ import { ChartLineComponent } from './components/chart-line/chart-line.component
     TagComponent,
     TableComponent,
     ChartLineComponent,
+    ChartDonutComponent,
   ],
   imports: [
     CommonModule,
@@ -49,7 +51,8 @@ import { ChartLineComponent } from './components/chart-line/chart-line.component
     PointerInfoComponent,
     TagComponent,
     TableComponent,
-    ChartLineComponent
+    ChartLineComponent,
+    ChartDonutComponent
   ]
 })
 

@@ -22,6 +22,7 @@ export * from './lib/components/pointer-info/pointer-info.component';
 export * from './lib/components/table/table.component';
 export * from './lib/components/tag/tag.component';
 export * from './lib/components/chart-line/chart-line.component';
+export * from './lib/components/chart-donut/chart-donut.component';
 
 export * from './lib/fuctions/format.service';
 // export * from './lib/fuctions/fuctions.module';

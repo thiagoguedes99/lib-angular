@@ -1,0 +1,27 @@
+:host ::ng-deep .apexcharts-legend {
+  display: none;
+}
+
+.chart-donut__container {
+  position: relative;
+  display: inline-flex;
+}
+
+.chart-donut__total {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-58%, -100%);
+  top: 50%;
+  left: 50%;
+}
+
+.chart-donut__total__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #89837F;
+}
