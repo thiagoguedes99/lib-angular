@@ -22,7 +22,7 @@ export class FuctionsService {
   }
 
   /** Valida se o device tem um tela tamanho mobile, tamanho default 960px de largura */
-  isMobile(date: string = '') {
+  isMobile(date: string) {
     return isMobile(date)
   }
 

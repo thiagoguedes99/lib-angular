@@ -900,7 +900,7 @@ class FuctionsService {
         return fullDate(date);
     }
     /** Valida se o device tem um tela tamanho mobile, tamanho default 960px de largura */
-    isMobile(date = '') {
+    isMobile(date) {
         return isMobile(date);
     }
 }

@@ -894,7 +894,6 @@
       };
       /** Valida se o device tem um tela tamanho mobile, tamanho default 960px de largura */
       FuctionsService.prototype.isMobile = function (date) {
-          if (date === void 0) { date = ''; }
           return isMobile(date);
       };
       return FuctionsService;
